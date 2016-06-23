@@ -1,0 +1,25 @@
+_prefs: 
+  mapid: ''
+  saveCenter: true
+_properties: {}
+attribution: ''
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+center: 
+  - -95.1416
+  - 40.0949
+  - 5
+description: ''
+format: "png8:m=h"
+interactivity_layer: ''
+layers: null
+maxzoom: 20
+minzoom: 0
+name: ''
+source: "http://vector.mapzen.com/osm/tilejson/mapbox.json"
+styles: 
+  - style.mss
+template: ''
