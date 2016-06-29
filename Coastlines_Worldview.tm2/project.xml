@@ -4,7 +4,7 @@
 
 <Parameters>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">42.7148,56.0229,3</Parameter>
+  <Parameter name="center">77.6953,36.0313,1</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">20</Parameter>
   <Parameter name="minzoom">0</Parameter>
@@ -18,7 +18,7 @@
 
 <Style name="earth" filter-mode="first">
   <Rule>
-    <LineSymbolizer stroke-width="1" stroke="#ff0000" />
+    <LineSymbolizer stroke-width="1" stroke="#ffffff" />
   </Rule>
 </Style>
 <Layer name="earth"
