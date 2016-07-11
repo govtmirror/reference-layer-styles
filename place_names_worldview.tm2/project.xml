@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#ffffff">
+
+<Parameters>
+  <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
+  <Parameter name="center">75.4102,11.9533,3</Parameter>
+  <Parameter name="format">png8:m=h</Parameter>
+  <Parameter name="maxzoom">20</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="source"><![CDATA[http://localhost/worldview/mapbox-studio-mapzen-tiles-custom1.json]]></Parameter>
+</Parameters>
+
+
+<Style name="water" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="1" stroke="rgba(136, 170, 238, 0.5)" />
+  </Rule>
+</Style>
+<Layer name="water"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>water</StyleName>  </Layer>
+
+<Style name="earth" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="1" stroke="rgba(204, 170, 170, 0.5)" />
+  </Rule>
+</Style>
+<Layer name="earth"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>earth</StyleName>  </Layer>
+
+<Layer name="landuse"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="roads"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="buildings"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="boundaries" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="1" stroke="rgba(204, 187, 255, 0.5)" />
+  </Rule>
+</Style>
+<Layer name="boundaries"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>boundaries</StyleName>  </Layer>
+
+<Style name="pois" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="1" stroke="rgba(85, 68, 68, 0.5)" />
+  </Rule>
+</Style>
+<Layer name="pois"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>pois</StyleName>  </Layer>
+
+<Style name="places" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([kind] = 'country')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(204, 119, 136, 0.5)" />
+    <TextSymbolizer size="10" wrap-width="140" face-name="Clan Offc Pro Medium" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-before="true" avoid-edges="true" minimum-distance="5" ><![CDATA['']]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([kind] = 'country')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(204, 119, 136, 0.5)" />
+    <TextSymbolizer size="10" wrap-width="140" face-name="Clan Offc Pro Medium" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-before="true" avoid-edges="true" minimum-distance="5" ><![CDATA[[name:en]-[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([kind] = 'country')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(204, 119, 136, 0.5)" />
+    <TextSymbolizer face-name="Clan Offc Pro Medium" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="5" ><![CDATA[[name:en]-[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([kind] = 'country')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(204, 119, 136, 0.5)" />
+  </Rule>
+  <Rule>
+    <LineSymbolizer stroke-width="1" stroke="rgba(204, 119, 136, 0.5)" />
+  </Rule>
+</Style>
+<Layer name="places"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>places</StyleName>  </Layer>
+
+</Map>

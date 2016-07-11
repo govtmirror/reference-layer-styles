@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#ffffff">
+
+<Parameters>
+  <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
+  <Parameter name="center">-79.2224,37.8749,7</Parameter>
+  <Parameter name="format">png8:m=h</Parameter>
+  <Parameter name="maxzoom">20</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="source"><![CDATA[http://localhost/worldview/mapbox-studio-mapzen-tiles-custom1.json]]></Parameter>
+</Parameters>
+
+
+<Style name="water" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="0" stroke="rgba(136, 170, 238, 0.5)" />
+  </Rule>
+</Style>
+<Layer name="water"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>water</StyleName>  </Layer>
+
+<Style name="earth" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="1" stroke="rgba(175, 170, 170, 0.5)" />
+  </Rule>
+</Style>
+<Layer name="earth"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>earth</StyleName>  </Layer>
+
+<Style name="landuse" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="0" stroke="#bdd0cd" />
+  </Rule>
+</Style>
+<Layer name="landuse"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>landuse</StyleName>  </Layer>
+
+<Style name="roads" filter-mode="first">
+  <Rule>
+    <Filter>([kind] = 'highway')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(238, 184, 43, 0.5)" />
+  </Rule>
+</Style>
+<Layer name="roads"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>roads</StyleName>  </Layer>
+
+<Layer name="buildings"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="boundaries" filter-mode="first">
+  <Rule>
+    <Filter>([kind] = 'state')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#bdd0cd" />
+  </Rule>
+</Style>
+<Style name="boundaries-fill" filter-mode="first">
+  <Rule>
+    <Filter>([kind] = 'disputed')</Filter>
+    <LineSymbolizer stroke-width="2.5" stroke="#bdd0cd" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="3, 4" />
+  </Rule>
+  <Rule>
+    <Filter>([kind] = 'country')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#bdd0cd" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+</Style>
+<Style name="boundaries-case" filter-mode="first">
+  <Rule>
+    <Filter>([kind] = 'disputed')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="rgba(243, 38, 10, 0.5)" stroke-dasharray="3, 4" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <Filter>([kind] = 'country')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="rgba(7, 6, 6, 0.5)" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+</Style>
+<Layer name="boundaries"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>boundaries-case</StyleName>
+    <StyleName>boundaries-fill</StyleName>
+    <StyleName>boundaries</StyleName>  </Layer>
+
+<Style name="pois" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="0" stroke="rgba(85, 68, 68, 0.5)" />
+  </Rule>
+</Style>
+<Layer name="pois"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>pois</StyleName>  </Layer>
+
+<Style name="places" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="0" stroke="rgba(204, 119, 136, 0.5)" />
+  </Rule>
+</Style>
+<Layer name="places"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>places</StyleName>  </Layer>
+
+</Map>
