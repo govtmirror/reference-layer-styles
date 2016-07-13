@@ -4,7 +4,7 @@
 
 <Parameters>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-78.8763,42.886,8</Parameter>
+  <Parameter name="center">-76.8549,42.1196,9</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">20</Parameter>
   <Parameter name="minzoom">0</Parameter>
@@ -15,8 +15,8 @@
 <Style name="water" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>1500000</MaxScaleDenominator>
-    <Filter>([kind] = 'lakes') and ([boundary] = 'yes')</Filter>
-    <LineSymbolizer stroke="#808080" stroke-width="1" />
+    <Filter>([boundary] = 'yes')</Filter>
+    <LineSymbolizer stroke="#000000" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000000</MaxScaleDenominator>

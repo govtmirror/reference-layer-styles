@@ -26,30 +26,31 @@ Map {
 }
 
 /*
-#places[zoom>=3] {
+#places[zoom>=3] [kind='country'] {
   text-name: @name;
   text-face-name: 'Clan Offc Pro Medium';
   text-fill: #eee;
-  text-size: 12;
+  text-size: 10;
   text-halo-fill: #222;
   text-halo-radius: 1;
+   text-avoid-edges: true;
   text-wrap-width: 50;
   [zoom>=3][scalerank=1],
   [zoom>=4][scalerank=2],
   [zoom>=5][scalerank=3],
   [zoom>=6][scalerank>3] {
-    text-size: 14;
+    text-size: 10;
   }
   [zoom>=4][scalerank=1],
   [zoom>=5][scalerank=2],
   [zoom>=6][scalerank=3],
   [zoom>=7][scalerank>3] {
-    text-size: 16;
+    text-size: 12;
   }
   [zoom>=6][scalerank=1],
   [zoom>=7][scalerank=2],
   [zoom>=8][scalerank>=3] {
-    text-size: 20;
+    text-size: 14;
   }
 }
 */
@@ -61,19 +62,19 @@ Map {
 
 #places { 
   [zoom>=2][kind='country'] {
-  text-name: @name;
+  text-name: [name:en];
    text-face-name: 'Clan Offc Pro Medium'; 
    text-fill: #eee;
    text-halo-fill: #222; //#444;
     text-halo-radius: 1.5; //3;
     text-wrap-width: 30;
     text-wrap-before: true;
-    text-avoid-edges: true;
-    text-min-distance: 5;   
+    text-avoid-edges: false;
+    text-min-distance: 0.5;   
      
     
    [zoom>=8] { 
-      text-name: @name;
+      text-name: [name:en];
       text-size: 10;
       text-wrap-width: 140;
     }

@@ -4,7 +4,7 @@
 
 <Parameters>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">75.4102,11.9533,3</Parameter>
+  <Parameter name="center">7.9102,-3.4696,4</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">20</Parameter>
   <Parameter name="minzoom">0</Parameter>
@@ -65,21 +65,21 @@
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <Filter>([kind] = 'country')</Filter>
     <LineSymbolizer stroke-width="1" stroke="rgba(204, 119, 136, 0.5)" />
-    <TextSymbolizer size="10" wrap-width="140" face-name="Clan Offc Pro Medium" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-before="true" avoid-edges="true" minimum-distance="5" ><![CDATA['']]></TextSymbolizer>
+    <TextSymbolizer size="10" wrap-width="140" face-name="Clan Offc Pro Medium" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-before="true" avoid-edges="false" minimum-distance="0.5" ><![CDATA['']]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([kind] = 'country')</Filter>
     <LineSymbolizer stroke-width="1" stroke="rgba(204, 119, 136, 0.5)" />
-    <TextSymbolizer size="10" wrap-width="140" face-name="Clan Offc Pro Medium" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-before="true" avoid-edges="true" minimum-distance="5" ><![CDATA[[name:en]-[name]]]></TextSymbolizer>
+    <TextSymbolizer size="10" wrap-width="140" face-name="Clan Offc Pro Medium" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-before="true" avoid-edges="false" minimum-distance="0.5" ><![CDATA[[name:en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000000</MaxScaleDenominator>
     <MinScaleDenominator>3000000</MinScaleDenominator>
     <Filter>([kind] = 'country')</Filter>
     <LineSymbolizer stroke-width="1" stroke="rgba(204, 119, 136, 0.5)" />
-    <TextSymbolizer face-name="Clan Offc Pro Medium" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="5" ><![CDATA[[name:en]-[name]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="false" minimum-distance="0.5" ><![CDATA[[name:en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>200000000</MinScaleDenominator>
