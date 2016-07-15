@@ -4,7 +4,7 @@
 
 <Parameters>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">87.0996,32.2128,4</Parameter>
+  <Parameter name="center">120.5502,24.3784,9</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">20</Parameter>
   <Parameter name="minzoom">0</Parameter>
@@ -51,6 +51,22 @@
       </Layer>
 
 <Style name="boundaries" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([admin_level] = 4)</Filter>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([admin_level] = 4)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes')</Filter>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
   <Rule>
     <MaxScaleDenominator>25000000</MaxScaleDenominator>
     <Filter>([admin_level] = 4)</Filter>
