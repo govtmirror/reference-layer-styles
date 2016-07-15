@@ -9,8 +9,8 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - 7.9102
-  - -3.4696
+  - -97.4707
+  - 36.8093
   - 4
 description: ''
 format: "png8:m=h"
@@ -19,7 +19,7 @@ layers: null
 maxzoom: 20
 minzoom: 0
 name: ''
-source: "http://localhost/worldview/mapbox-studio-mapzen-tiles-custom1.json"
+source: "http://localhost/mapzen-tilejsons/mapbox-studio-mapzen-tiles-custom1.json"
 styles: 
   - style.mss
 template: ''

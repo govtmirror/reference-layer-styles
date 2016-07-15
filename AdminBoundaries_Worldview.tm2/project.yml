@@ -9,9 +9,9 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - -7.0862
-  - 27.2693
-  - 7
+  - 87.0996
+  - 32.2128
+  - 4
 description: ''
 format: "png8:m=h"
 interactivity_layer: ''
@@ -19,7 +19,7 @@ layers: null
 maxzoom: 20
 minzoom: 0
 name: ''
-source: "http://localhost/worldview/mapbox-studio-mapzen-tiles-custom1.json"
+source: "http://localhost/mapzen-tilejsons/mapbox-studio-mapzen-tiles-custom1.json"
 styles: 
   - style.mss
 template: ''

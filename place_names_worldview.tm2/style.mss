@@ -5,12 +5,12 @@ Map {
   background-color: #fff;
 }
 
-#water {
+#water [boundary='yes'] {
   line-width: 1;
   line-color: rgba(136,170,238,0.5);
 }
 
-#earth {
+#earth [boundary='yes'] {
   line-width: 1;
   line-color: rgba(204,170,170,0.5);
 }

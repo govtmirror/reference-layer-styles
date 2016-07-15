@@ -4,16 +4,17 @@
 
 <Parameters>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">7.9102,-3.4696,4</Parameter>
+  <Parameter name="center">-97.4707,36.8093,4</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">20</Parameter>
   <Parameter name="minzoom">0</Parameter>
-  <Parameter name="source"><![CDATA[http://localhost/worldview/mapbox-studio-mapzen-tiles-custom1.json]]></Parameter>
+  <Parameter name="source"><![CDATA[http://localhost/mapzen-tilejsons/mapbox-studio-mapzen-tiles-custom1.json]]></Parameter>
 </Parameters>
 
 
 <Style name="water" filter-mode="first">
   <Rule>
+    <Filter>([boundary] = 'yes')</Filter>
     <LineSymbolizer stroke-width="1" stroke="rgba(136, 170, 238, 0.5)" />
   </Rule>
 </Style>
@@ -23,6 +24,7 @@
 
 <Style name="earth" filter-mode="first">
   <Rule>
+    <Filter>([boundary] = 'yes')</Filter>
     <LineSymbolizer stroke-width="1" stroke="rgba(204, 170, 170, 0.5)" />
   </Rule>
 </Style>
