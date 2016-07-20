@@ -1,24 +1,22 @@
-@land: rgb(75, 75, 75);
-@water: rgb(128, 128, 128);
+@water: rgb(75, 75, 75);
+@land: rgb(128, 128, 128);
 
 
 Map {
-  background-color: @water;
+  background-color: @land;
 }
 
 #water [boundary !='yes'][zoom>=2] {
-  polygon-fill:@land;
+  polygon-fill:@water;
   polygon-gamma: 0.6;
 }
   
 #water [zoom>=9] [boundary='yes']{
     line-color:#000;
-   
      }
-
-//#earth [boundary='yes'] {
- //polygon-fill: @land;
-  //}
+#earth [boundary='yes'] {
+ polygon-fill: @land;
+  }
 
 /*
 #water {

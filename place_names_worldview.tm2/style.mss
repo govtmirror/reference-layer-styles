@@ -1,9 +1,3 @@
-// Language options: name (local), name:en,
-@name: [name:en]-[name];
-
-Map {
-  background-color: #fff;
-}
 
 #water [boundary='yes'] {
   line-width: 1;
@@ -55,6 +49,35 @@ Map {
 }
 */
 
+#places [[name:en] != null][kind = 'country'] {
+    text-name: [name:en];
+    text-face-name: 'Clan Offc Pro Medium'; 
+    text-size: 10;
+    text-fill: #eee;
+    text-halo-fill: #222; //#444;
+    text-halo-radius: 1.5; //3;
+    text-wrap-width: 30;
+    text-wrap-before: true;
+    text-avoid-edges: true;
+    text-min-distance: 0.5;
+    [[name:en]='Republic of China']  { text-name: 'Taiwan'; }
+    [[name:en]='Macedonia']          { text-name: '"Macedonia (FYROM)"'; }
+}
+
+#places [[name:en] = null][kind = 'country']{
+    text-name: [name];
+    text-face-name: 'Clan Offc Pro Medium'; 
+    text-size: 10;
+    text-fill: #eee;
+    text-halo-fill: #222; //#444;
+    text-halo-radius: 1.5; //3;
+    text-wrap-width: 30;
+    text-wrap-before: true;
+    text-avoid-edges: true;
+    text-min-distance: 0.5; 
+}
+
+/*
 #places {
   line-width: 1;
   line-color: rgba(204,119,136,0.5);
@@ -82,14 +105,15 @@ Map {
     [zoom>=12] { text-name: "''"; }
   }
   }
+*/
 
-/*
 // Cities
-  [kind='city'][zoom>=8][zoom<=15] {
-    text-name:[name];	
+  #places [[name:en] != null] [kind='city'][zoom>=6][zoom<=15] {
+    text-name:[name:en];	
     text-face-name: 'Clan Offc Pro Medium';
-    text-size: 15;
+    text-size: 10;
     text-line-spacing:-7;
+    text-avoid-edges: true;
   
     [zoom>=10] { 
       text-size: 17;
@@ -102,13 +126,34 @@ Map {
     // Hide at largest scales:
     [zoom>=16] { text-name: "''"; }
   }
+
+
+#places [[name:en] = null] [kind='city'][zoom>=6][zoom<=15] {
+    text-name:[name];	
+    text-face-name: 'Clan Offc Pro Medium';
+    text-size: 10;
+    text-line-spacing:-7;
+    text-avoid-edges: true;
   
+    [zoom>=10] { 
+      text-size: 17;
+      text-wrap-width: 140;
+    }
+    [zoom>=12] { 
+      text-size: 20;
+      text-wrap-width: 180;
+    }
+    // Hide at largest scales:
+    [zoom>=16] { text-name: "''"; }
+  }
+/*  
   // Towns
   [kind='town'] {
-    text-name:[name];
-    text-size: 12;    
+    text-name:[name:en];
+    text-size: 10;    
     text-face-name: 'Clan Offc Pro Medium';
-    text-halo-fill: #222;
+    text-avoid-edges: true;
+    
     text-halo-radius: 1.9;
     [zoom>=12] { text-size: 12; }
     [zoom>=14] { text-size: 16; }

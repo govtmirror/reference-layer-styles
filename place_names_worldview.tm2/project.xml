@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE Map[]>
-<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#ffffff">
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
 
 <Parameters>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-97.4707,36.8093,4</Parameter>
+  <Parameter name="center">21.7969,40.6723,6</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">20</Parameter>
   <Parameter name="minzoom">0</Parameter>
@@ -65,31 +65,55 @@
 <Style name="places" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
-    <Filter>([kind] = 'country')</Filter>
-    <LineSymbolizer stroke-width="1" stroke="rgba(204, 119, 136, 0.5)" />
-    <TextSymbolizer size="10" wrap-width="140" face-name="Clan Offc Pro Medium" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-before="true" avoid-edges="false" minimum-distance="0.5" ><![CDATA['']]></TextSymbolizer>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([name:en] = null) and ([kind] = 'city')</Filter>
+    <TextSymbolizer size="20" wrap-width="180" face-name="Clan Offc Pro Medium" line-spacing="-7" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
-    <Filter>([kind] = 'country')</Filter>
-    <LineSymbolizer stroke-width="1" stroke="rgba(204, 119, 136, 0.5)" />
-    <TextSymbolizer size="10" wrap-width="140" face-name="Clan Offc Pro Medium" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-before="true" avoid-edges="false" minimum-distance="0.5" ><![CDATA[[name:en]]]></TextSymbolizer>
+    <Filter>([name:en] = null) and ([kind] = 'city')</Filter>
+    <TextSymbolizer size="17" wrap-width="140" face-name="Clan Offc Pro Medium" line-spacing="-7" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <MaxScaleDenominator>200000000</MaxScaleDenominator>
-    <MinScaleDenominator>3000000</MinScaleDenominator>
-    <Filter>([kind] = 'country')</Filter>
-    <LineSymbolizer stroke-width="1" stroke="rgba(204, 119, 136, 0.5)" />
-    <TextSymbolizer face-name="Clan Offc Pro Medium" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="false" minimum-distance="0.5" ><![CDATA[[name:en]]]></TextSymbolizer>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([name:en] = null) and ([kind] = 'city')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" line-spacing="-7" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <MinScaleDenominator>200000000</MinScaleDenominator>
-    <Filter>([kind] = 'country')</Filter>
-    <LineSymbolizer stroke-width="1" stroke="rgba(204, 119, 136, 0.5)" />
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([name:en] != null) and ([kind] = 'city')</Filter>
+    <TextSymbolizer size="20" wrap-width="180" face-name="Clan Offc Pro Medium" line-spacing="-7" avoid-edges="true" ><![CDATA[[name:en]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <LineSymbolizer stroke-width="1" stroke="rgba(204, 119, 136, 0.5)" />
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([name:en] != null) and ([kind] = 'city')</Filter>
+    <TextSymbolizer size="17" wrap-width="140" face-name="Clan Offc Pro Medium" line-spacing="-7" avoid-edges="true" ><![CDATA[[name:en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([name:en] != null) and ([kind] = 'city')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" line-spacing="-7" avoid-edges="true" ><![CDATA[[name:en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([kind] = 'country') and ([name:en] = 'Macedonia')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["Macedonia (FYROM)"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([kind] = 'country') and ([name:en] = 'Republic of China')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[Taiwan]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([name:en] = null) and ([kind] = 'country')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([name:en] != null) and ([kind] = 'country')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name:en]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="places"
