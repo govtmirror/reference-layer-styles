@@ -4,7 +4,7 @@
 
 <Parameters>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-80.6836,45.2903,5</Parameter>
+  <Parameter name="center">-135,50.9584,2</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">20</Parameter>
   <Parameter name="minzoom">0</Parameter>
@@ -14,9 +14,38 @@
 
 <Style name="water" filter-mode="first">
   <Rule>
-    <Filter>([boundary] = 'yes') and ([kind] = 'lake') and ([area] &gt;= 1000000000)</Filter>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([boundary] = 'yes') and ([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(136, 170, 238, 0.5)" comp-op="clear" />
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([boundary] = 'yes') and ([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(136, 170, 238, 0.5)" />
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([boundary] = 'yes') and ([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(136, 170, 238, 0.5)" comp-op="clear" />
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([boundary] = 'yes') and ([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
     <LineSymbolizer stroke-width="1" stroke="rgba(136, 170, 238, 0.5)" />
     <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([boundary] = 'yes') and ([maritime_boundary] = 'yes')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(136, 170, 238, 0.5)" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([boundary] = 'yes') and ([maritime_boundary] = 'yes')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(136, 170, 238, 0.5)" />
   </Rule>
   <Rule>
     <Filter>([boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
@@ -33,8 +62,31 @@
     <LineSymbolizer stroke-width="1" stroke="rgba(136, 170, 238, 0.5)" />
   </Rule>
   <Rule>
-    <Filter>([kind] = 'lake') and ([area] &gt;= 1000000000)</Filter>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
     <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes')</Filter>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
   </Rule>
   <Rule>
     <Filter>([kind] = 'sea') and ([name] = 'South Sea')</Filter>
@@ -51,8 +103,37 @@
 
 <Style name="earth" filter-mode="first">
   <Rule>
-    <Filter>([boundary] = 'yes') and ([kind] = 'lake') and ([area] &gt;= 1000000000)</Filter>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([boundary] = 'yes') and ([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+    <LineSymbolizer stroke-width="1" stroke="rgba(204, 170, 170, 0.5)" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([boundary] = 'yes') and ([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+    <LineSymbolizer stroke-width="1" stroke="rgba(204, 170, 170, 0.5)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([boundary] = 'yes') and ([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
     <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <LineSymbolizer stroke-width="1" stroke="rgba(204, 170, 170, 0.5)" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([boundary] = 'yes') and ([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <LineSymbolizer stroke-width="1" stroke="rgba(204, 170, 170, 0.5)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([boundary] = 'yes') and ([maritime_boundary] = 'yes')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(204, 170, 170, 0.5)" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([boundary] = 'yes') and ([maritime_boundary] = 'yes')</Filter>
     <LineSymbolizer stroke-width="1" stroke="rgba(204, 170, 170, 0.5)" />
   </Rule>
   <Rule>
@@ -70,8 +151,31 @@
     <LineSymbolizer stroke-width="1" stroke="rgba(204, 170, 170, 0.5)" />
   </Rule>
   <Rule>
-    <Filter>([kind] = 'lake') and ([area] &gt;= 1000000000)</Filter>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
     <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes')</Filter>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
   </Rule>
   <Rule>
     <Filter>([kind] = 'sea') and ([name] = 'South Sea')</Filter>
@@ -88,8 +192,31 @@
 
 <Style name="landuse" filter-mode="first">
   <Rule>
-    <Filter>([kind] = 'lake') and ([area] &gt;= 1000000000)</Filter>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
     <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes')</Filter>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
   </Rule>
   <Rule>
     <Filter>([kind] = 'sea') and ([name] = 'South Sea')</Filter>
@@ -106,8 +233,31 @@
 
 <Style name="roads" filter-mode="first">
   <Rule>
-    <Filter>([kind] = 'lake') and ([area] &gt;= 1000000000)</Filter>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
     <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes')</Filter>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
   </Rule>
   <Rule>
     <Filter>([kind] = 'sea') and ([name] = 'South Sea')</Filter>
@@ -124,8 +274,31 @@
 
 <Style name="buildings" filter-mode="first">
   <Rule>
-    <Filter>([kind] = 'lake') and ([area] &gt;= 1000000000)</Filter>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
     <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes')</Filter>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
   </Rule>
   <Rule>
     <Filter>([kind] = 'sea') and ([name] = 'South Sea')</Filter>
@@ -142,8 +315,37 @@
 
 <Style name="boundaries" filter-mode="first">
   <Rule>
-    <Filter>([kind] = 'lake') and ([area] &gt;= 1000000000)</Filter>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+    <LineSymbolizer stroke-width="1" stroke="rgba(204, 187, 255, 0.5)" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+    <LineSymbolizer stroke-width="1" stroke="rgba(204, 187, 255, 0.5)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
     <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <LineSymbolizer stroke-width="1" stroke="rgba(204, 187, 255, 0.5)" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <LineSymbolizer stroke-width="1" stroke="rgba(204, 187, 255, 0.5)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(204, 187, 255, 0.5)" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes')</Filter>
     <LineSymbolizer stroke-width="1" stroke="rgba(204, 187, 255, 0.5)" />
   </Rule>
   <Rule>
@@ -166,8 +368,37 @@
 
 <Style name="pois" filter-mode="first">
   <Rule>
-    <Filter>([kind] = 'lake') and ([area] &gt;= 1000000000)</Filter>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+    <LineSymbolizer stroke-width="1" stroke="rgba(85, 68, 68, 0.5)" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+    <LineSymbolizer stroke-width="1" stroke="rgba(85, 68, 68, 0.5)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
     <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <LineSymbolizer stroke-width="1" stroke="rgba(85, 68, 68, 0.5)" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <LineSymbolizer stroke-width="1" stroke="rgba(85, 68, 68, 0.5)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(85, 68, 68, 0.5)" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes')</Filter>
     <LineSymbolizer stroke-width="1" stroke="rgba(85, 68, 68, 0.5)" />
   </Rule>
   <Rule>
@@ -192,6 +423,38 @@
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([name:en] = null) and ([kind] = 'city') and ([maritime_boundary] = 'yes')</Filter>
+    <TextSymbolizer size="20" wrap-width="180" face-name="Clan Offc Pro Medium" line-spacing="-7" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([name:en] = null) and ([kind] = 'city') and ([maritime_boundary] = 'yes')</Filter>
+    <TextSymbolizer size="17" wrap-width="140" face-name="Clan Offc Pro Medium" line-spacing="-7" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([name:en] = null) and ([kind] = 'city') and ([maritime_boundary] = 'yes')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" line-spacing="-7" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([name:en] = null) and ([kind] = 'city') and ([maritime_boundary] = 'yes')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" line-spacing="-7" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([name:en] = null) and ([kind] = 'city') and ([maritime_boundary] = 'yes')</Filter>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([name:en] = null) and ([kind] = 'city')</Filter>
     <TextSymbolizer size="20" wrap-width="180" face-name="Clan Offc Pro Medium" line-spacing="-7" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
@@ -206,6 +469,38 @@
     <MinScaleDenominator>750000</MinScaleDenominator>
     <Filter>([name:en] = null) and ([kind] = 'city')</Filter>
     <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" line-spacing="-7" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([name:en] != null) and ([kind] = 'city') and ([maritime_boundary] = 'yes')</Filter>
+    <TextSymbolizer size="20" wrap-width="180" face-name="Clan Offc Pro Medium" line-spacing="-7" avoid-edges="true" ><![CDATA[[name:en]]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([name:en] != null) and ([kind] = 'city') and ([maritime_boundary] = 'yes')</Filter>
+    <TextSymbolizer size="17" wrap-width="140" face-name="Clan Offc Pro Medium" line-spacing="-7" avoid-edges="true" ><![CDATA[[name:en]]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([name:en] != null) and ([kind] = 'city') and ([maritime_boundary] = 'yes')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" line-spacing="-7" avoid-edges="true" ><![CDATA[[name:en]]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([name:en] != null) and ([kind] = 'city') and ([maritime_boundary] = 'yes')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" line-spacing="-7" avoid-edges="true" ><![CDATA[[name:en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([name:en] != null) and ([kind] = 'city') and ([maritime_boundary] = 'yes')</Filter>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
@@ -226,24 +521,91 @@
     <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" line-spacing="-7" avoid-edges="true" ><![CDATA[[name:en]]]></TextSymbolizer>
   </Rule>
   <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([kind] = 'country') and ([name:en] = 'Macedonia') and ([maritime_boundary] = 'yes')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["Macedonia (FYROM)"]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([kind] = 'country') and ([name:en] = 'Macedonia') and ([maritime_boundary] = 'yes')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["Macedonia (FYROM)"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
     <Filter>([kind] = 'country') and ([name:en] = 'Macedonia')</Filter>
     <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["Macedonia (FYROM)"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([kind] = 'country') and ([name:en] = 'Republic of China') and ([maritime_boundary] = 'yes')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[Taiwan]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([kind] = 'country') and ([name:en] = 'Republic of China') and ([maritime_boundary] = 'yes')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[Taiwan]]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([kind] = 'country') and ([name:en] = 'Republic of China')</Filter>
     <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[Taiwan]]></TextSymbolizer>
   </Rule>
   <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([name:en] = null) and ([kind] = 'country') and ([maritime_boundary] = 'yes')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="false" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([name:en] = null) and ([kind] = 'country') and ([maritime_boundary] = 'yes')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="false" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
     <Filter>([name:en] = null) and ([kind] = 'country')</Filter>
-    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="false" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([name:en] != null) and ([kind] = 'country') and ([maritime_boundary] = 'yes')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name:en]]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([name:en] != null) and ([kind] = 'country') and ([maritime_boundary] = 'yes')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name:en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([name:en] != null) and ([kind] = 'country')</Filter>
     <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name:en]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <Filter>([kind] = 'lake') and ([area] &gt;= 1000000000)</Filter>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea') and ([name] = 'South Sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA["South China Sea"]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
     <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes') and ([kind] = 'sea')</Filter>
+    <TextSymbolizer face-name="Clan Offc Pro Medium" size="10" fill="#eeeeee" halo-fill="#222222" halo-radius="1.5" wrap-width="30" wrap-before="true" avoid-edges="true" minimum-distance="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([maritime_boundary] = 'yes')</Filter>
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" />
   </Rule>
   <Rule>
     <Filter>([kind] = 'sea') and ([name] = 'South Sea')</Filter>

@@ -16,17 +16,7 @@
   text-min-distance: 0.5;
    [[name]='South Sea']  { text-name: '"South China Sea"'; }
   }
-  [kind='lake'] [area>=1000000000]{
-  text-name: [name];
-  text-face-name: 'Clan Offc Pro Medium'; 
-  text-size: 10;
-  text-fill: #eee;
-  text-halo-fill: #222;
-  text-halo-radius: 1.5;
-  text-wrap-width: 30;
-  text-wrap-before: true;
-  text-avoid-edges: true;
-  text-min-distance: 0.5;
+  [kind='lake'] [area>=2000000000]{
   }
 
 #earth [boundary='yes'] {
@@ -43,6 +33,7 @@
   line-width: 1;
   line-color: rgba(85,68,68,0.5);
 }
+
 
 /*
 #places[zoom>=3] [kind='country'] {
@@ -98,7 +89,7 @@
     text-halo-radius: 1.5; //3;
     text-wrap-width: 30;
     text-wrap-before: true;
-    text-avoid-edges: true;
+    text-avoid-edges: false;
     text-min-distance: 0.5; 
 }
 
@@ -187,3 +178,10 @@
     [zoom>=18] { text-name: "''"; }
   }
   */
+  //===== Turn off maritime boundaries
+  
+   [maritime_boundary='yes'] [zoom>=8] {
+    line-comp-op: clear;
+    line-width: 2;
+    line-color: #bdd0cd;
+    } 
