@@ -5,8 +5,7 @@ Map {
   background-color: @land;
 }
 
-#water [boundary !='yes']
-{
+#water [boundary !='yes'] {
   [zoom>=1] [area>40000000000],
   [zoom>=2] [area>20000000000],
   [zoom>=3] [area>80000000000],
@@ -21,9 +20,8 @@ Map {
   [zoom>=12] [area>200000],
   [zoom>=13] [area>100000],
   [zoom>=14] [area>2000],
-  [zoom<=15] [area>1000]
-{
+  [zoom<=15] [area>1000] {
   polygon-fill:@water;
-  polygon-gamma: 0.6;
-}
+  polygon-gamma: 0.6; 
+  }
 }
