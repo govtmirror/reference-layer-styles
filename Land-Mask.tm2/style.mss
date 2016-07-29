@@ -19,7 +19,7 @@ Map {
   [zoom>=12] [area>200000],
   [zoom>=13] [area>100000],
   [zoom>=14] [area>2000],
-  [zoom<=15] [area>1000] {
+  [zoom>=15] [area>1000] {
   polygon-fill:#fff;
   polygon-comp-op: clear;
   }

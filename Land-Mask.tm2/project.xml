@@ -19,17 +19,7 @@
     <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>500000000</MinScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 80000000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
     <MaxScaleDenominator>500000000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 40000000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>500000000</MinScaleDenominator>
     <Filter>([boundary] != 'yes') and ([area] &gt; 40000000000)</Filter>
     <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
@@ -51,11 +41,6 @@
     <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>200000000</MinScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 20000000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <Filter>([boundary] != 'yes') and ([area] &gt; 5000000000)</Filter>
     <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
@@ -63,11 +48,6 @@
   <Rule>
     <MaxScaleDenominator>50000000</MaxScaleDenominator>
     <MinScaleDenominator>3000000</MinScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 5000000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>50000000</MinScaleDenominator>
     <Filter>([boundary] != 'yes') and ([area] &gt; 5000000000)</Filter>
     <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
@@ -83,11 +63,6 @@
     <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>25000000</MinScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 700000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <Filter>([boundary] != 'yes') and ([area] &gt; 500000000)</Filter>
     <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
@@ -95,11 +70,6 @@
   <Rule>
     <MaxScaleDenominator>12500000</MaxScaleDenominator>
     <MinScaleDenominator>3000000</MinScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 500000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>12500000</MinScaleDenominator>
     <Filter>([boundary] != 'yes') and ([area] &gt; 500000000)</Filter>
     <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
@@ -115,17 +85,7 @@
     <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>6500000</MinScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 160000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 40000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>3000000</MinScaleDenominator>
     <Filter>([boundary] != 'yes') and ([area] &gt; 40000000)</Filter>
     <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
@@ -135,17 +95,7 @@
     <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>1500000</MinScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 10000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 8000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>750000</MinScaleDenominator>
     <Filter>([boundary] != 'yes') and ([area] &gt; 8000000)</Filter>
     <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
@@ -155,17 +105,7 @@
     <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>400000</MinScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 2000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 200000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([boundary] != 'yes') and ([area] &gt; 200000)</Filter>
     <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
@@ -175,22 +115,12 @@
     <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>100000</MinScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 100000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <Filter>([boundary] != 'yes') and ([area] &gt; 2000)</Filter>
     <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 2000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>12500</MinScaleDenominator>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
     <Filter>([boundary] != 'yes') and ([area] &gt; 1000)</Filter>
     <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>

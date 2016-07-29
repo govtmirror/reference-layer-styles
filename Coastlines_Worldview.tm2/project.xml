@@ -4,7 +4,7 @@
 
 <Parameters>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">45.5713,40.1033,6</Parameter>
+  <Parameter name="center">45.5273,33.0639,3</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">20</Parameter>
   <Parameter name="minzoom">0</Parameter>
@@ -16,72 +16,72 @@
   <Rule>
     <MaxScaleDenominator>200000000</MaxScaleDenominator>
     <MinScaleDenominator>100000000</MinScaleDenominator>
-    <Filter>([boundary] = 'yes')</Filter>
     <LineSymbolizer stroke-width="0.2" stroke="#001111" offset="0.4" stroke-opacity="1" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>500000000</MaxScaleDenominator>
     <MinScaleDenominator>200000000</MinScaleDenominator>
-    <Filter>([boundary] = 'yes')</Filter>
     <LineSymbolizer stroke-width="0.1" stroke="#001111" offset="0.4" stroke-opacity="1" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
   <Rule>
     <MinScaleDenominator>500000000</MinScaleDenominator>
-    <Filter>([boundary] = 'yes')</Filter>
     <LineSymbolizer stroke-width="0.1" stroke="#001111" offset="0.4" stroke-opacity="1" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000000</MaxScaleDenominator>
     <MinScaleDenominator>6500000</MinScaleDenominator>
-    <Filter>([boundary] = 'yes')</Filter>
     <LineSymbolizer stroke="#001111" stroke-width="0.75" offset="0.75" stroke-opacity="1" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000000</MaxScaleDenominator>
     <MinScaleDenominator>25000000</MinScaleDenominator>
-    <Filter>([boundary] = 'yes')</Filter>
     <LineSymbolizer stroke="#001111" stroke-width="0.55" offset="0.55" stroke-opacity="1" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>6500000</MaxScaleDenominator>
-    <Filter>([boundary] = 'yes')</Filter>
     <LineSymbolizer stroke="#001111" stroke-width="0.75" offset="0.75" stroke-opacity="1" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
 </Style>
 <Style name="water-underlay1" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>200000000</MaxScaleDenominator>
     <MinScaleDenominator>100000000</MinScaleDenominator>
-    <Filter>([boundary] = 'yes')</Filter>
     <LineSymbolizer stroke-width="0.6" stroke="#bbcccc" stroke-opacity="1" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>500000000</MaxScaleDenominator>
     <MinScaleDenominator>200000000</MinScaleDenominator>
-    <Filter>([boundary] = 'yes')</Filter>
     <LineSymbolizer stroke-width="0.6" stroke="#bbcccc" stroke-opacity="1" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
   <Rule>
     <MinScaleDenominator>500000000</MinScaleDenominator>
-    <Filter>([boundary] = 'yes')</Filter>
     <LineSymbolizer stroke-width="0.2" stroke="#bbcccc" stroke-opacity="1" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000000</MaxScaleDenominator>
     <MinScaleDenominator>6500000</MinScaleDenominator>
-    <Filter>([boundary] = 'yes')</Filter>
     <LineSymbolizer stroke="#bbcccc" stroke-width="0.75" stroke-opacity="1" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000000</MaxScaleDenominator>
     <MinScaleDenominator>25000000</MinScaleDenominator>
-    <Filter>([boundary] = 'yes')</Filter>
     <LineSymbolizer stroke="#bbcccc" stroke-width="0.55" stroke-opacity="1" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>6500000</MaxScaleDenominator>
-    <Filter>([boundary] = 'yes')</Filter>
     <LineSymbolizer stroke="#bbcccc" stroke-width="0.75" stroke-opacity="1" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
   </Rule>
 </Style>
 <Layer name="water"
