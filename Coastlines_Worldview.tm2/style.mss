@@ -14,6 +14,14 @@
 */
 
 #water [boundary='yes'][zoom>=0][zoom<=8] { 
+  [zoom>=1] [area>40000000000],
+  [zoom>=2] [area>20000000000],
+  [zoom>=3] [area>80000000000],
+  [zoom>=4] [area>5000000000],
+  [zoom>=5] [area>700000000],
+  [zoom>=6] [area>500000000],
+  [zoom>=7] [area>160000000],
+  [zoom>=8] [area>40000000],
   
     ::underlay1 {
     line-color: @coastline-color-light;
@@ -25,7 +33,7 @@
   ::overlay {
     line-color: @coastline-color-dark;
     line-width:  0.75;
-    line-opacity: 1;
+    line-opacity: 1.0;
     line-offset: 0.75;
     line-join: round;
     }
@@ -38,7 +46,7 @@
   [zoom>=12] [area>200000],
   [zoom>=13] [area>100000],
   [zoom>=14] [area>2000],
-  [zoom>=15] [area>1000] 
+  [zoom>=15] [area>1000] ,
   
     ::underlay1 {
     line-color:@coastline-color-light;
@@ -50,7 +58,7 @@
   ::overlay {
     line-color: @coastline-color-dark;
     line-width:  0.75;
-    line-opacity: 1;
+    line-opacity: 1.0;
     line-offset: 0.75;
     line-join: round;
     }
