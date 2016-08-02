@@ -2,13 +2,13 @@
 @coastline-color-dark: #011; //#ff0;
 
 @land: rgb(128, 128, 128);
-
+ /*
 Map {
   background-color: @land;
 }
 
 #water [boundary='yes']{
- 
+
   line-width: 1;
   line-color: #fff;
   line-opacity: 1.0;
@@ -17,7 +17,8 @@ Map {
   polygon-comp-op: clear;
     }
 
-/*
+*/
+  
 #water [boundary='yes'][zoom>=0][zoom<=8] { 
  ::underlay1 {
     line-color: @coastline-color-light;
@@ -53,5 +54,5 @@ Map {
     line-join: round;
     }
 }
-  */
+ 
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE Map[]>
-<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#808080">
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
 
 <Parameters>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
@@ -12,16 +12,36 @@
 </Parameters>
 
 
-<Style name="water" filter-mode="first">
+<Style name="water-overlay" filter-mode="first">
   <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([boundary] = 'yes')</Filter>
-    <LineSymbolizer stroke-width="1" stroke="#ffffff" stroke-opacity="1" stroke-linejoin="round" />
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+    <LineSymbolizer stroke="#001111" stroke-width="0.75" stroke-opacity="1" offset="0.75" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([boundary] = 'yes')</Filter>
+    <LineSymbolizer stroke="#001111" stroke-width="0.75" stroke-opacity="1" offset="0.75" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Style name="water-underlay1" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([boundary] = 'yes')</Filter>
+    <LineSymbolizer stroke="#bbcccc" stroke-width="0.75" stroke-opacity="1" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([boundary] = 'yes')</Filter>
+    <LineSymbolizer stroke="#bbcccc" stroke-width="0.75" stroke-opacity="1" stroke-linejoin="round" />
   </Rule>
 </Style>
 <Layer name="water"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName>water</StyleName>  </Layer>
+    <StyleName>water-underlay1</StyleName>
+    <StyleName>water-overlay</StyleName>  </Layer>
 
 <Layer name="earth"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
