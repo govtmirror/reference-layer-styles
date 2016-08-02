@@ -1,16 +1,41 @@
+@smooth: 				0; 
+@country-line-width: 1.0;
+@country-border-case-color: #bcc; //#444;
+@country-border-fill-color: #122; //#cc8
+
+@country-light: #dee; //#adb9b9; // #249590; //#558;
+@country-dark: #011; //#d35529; //#ebb;;
+
+@state-border-case-color: #818792;
+@state-border-fill-color: #aaa;
+
+@coastline-color-light: #bcc; //#ddd;
+@coastline-color-dark: #011; //#ff0;
+
 // ===== Coastlines and lakes
-
-#water [boundary='yes'] {
-  line-width: 1;
-  line-color: #fff;
-}
-
 /*
 #earth [boundary='yes'] {
   line-width: 1;
   line-color: rgba(236, 226, 226, 0.5);
 }
 */
+
+#water [boundary='yes'] {
+::underlay1 {
+    line-color: @coastline-color-light;
+    line-width: 0.75;
+    line-opacity: 1.0;
+    line-join: round;
+     }
+
+  ::overlay {
+    line-color: @coastline-color-dark;
+    line-width:  0.75;
+    line-opacity: 1.0;
+    line-offset: 0.75;
+    line-join: round;
+    }
+}
 
 // ===== Roads
 #roads [zoom>=9] {
@@ -27,12 +52,7 @@
   }
 
 // ===== Country borders
-@country-line-width: 1.0;
-@country-border-case-color: #bcc; //#444;
-@country-border-fill-color: #122; //#cc8
 
-@country-light: #dee; //#adb9b9; // #249590; //#558;
-@country-dark: #011; //#d35529; //#ebb;;
 
 #boundaries {
   [admin_level=2] {
@@ -71,12 +91,49 @@
       }
     }
   
-  
   //===== State borders
   
-  [admin_level=4][zoom>=5] {
-    line-width: 1;
-  line-color: #bdd0cd;
+  [admin_level=4][zoom>=4] {
+    
+    ::case {
+    line-cap: round;
+	line-color: @state-border-case-color;
+      
+    [zoom=4] { line-width: 0.4; }
+    [zoom=5] { line-width: 0.4; }
+  	[zoom=6] { line-width: 0.7; }
+    [zoom=7] { line-width: 0.6; }
+    [zoom=8] { line-width: 0.9; }
+  	[zoom=9] { line-width: 0.7; }
+    [zoom=10] { line-width: 0.8; }
+    [zoom=11] { line-width: 0.9; }
+    [zoom>=12] { line-width: 1; }
+  }
+  
+  ::fill {
+    line-cap: round;
+	line-color: @state-border-fill-color;
+
+	[zoom=4] { line-width: 0.1; }
+    [zoom=5] { line-width: 0.1; }  
+  	[zoom=6] { line-width: 0.2; }
+    [zoom=7] { line-width: 0.2; }
+    [zoom=8] { line-width: 0.4; }
+  	[zoom=9] { line-width: 0.5; }
+    [zoom=10] { line-width: 0.6; }
+    [zoom=11] { line-width: 0.7; }
+    [zoom>=12] { line-width: 0.8; }
+   
+  }
+}
+      
+  //===== County borders
+  
+  [admin_level=6][zoom>=10] {
+    line-width: 0.8;
+    line-offset: 0.4;
+    line-dasharray: 5, 2;
+  line-color: @state-border-fill-color;
     } 
   
   //===== Turn off maritime boundaries
