@@ -82,7 +82,7 @@
 }
   // ===== Disputed country borders
   
-  [zoom=4] [kind='disputed'] {
+  [zoom=4] [kind='disputed'][maritime_boundary!='yes'] {
     ::case {
      line-width: 1;
      line-color: @country-border-case-color;
@@ -102,7 +102,7 @@
   
   //===== State borders
   
-  [admin_level=4][zoom>=4] {
+  [admin_level=4][zoom>=4][maritime_boundary!='yes'] {
     
     ::case {
     line-cap: round;
