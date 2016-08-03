@@ -38,14 +38,14 @@
 }
 
 // ===== Roads
-#roads [zoom>=9] {
-  [kind='highway'] {
-   line-color: #747926;
+#roads [zoom>=8] {
+    [kind='highway'] {
+    line-color: #747926;
     line-width: 0.5;
     line-opacity: 1.0;
 }
-   [kind='major_road'] {
-     line-color: #747926;
+    [zoom>=9] [kind='major_road'] {
+    line-color: #747926;
     line-width: 0.25;
     line-opacity: 1.0;
   }
@@ -56,49 +56,49 @@
 #boundaries {
   [admin_level=2] {
   ::case {
-   line-color:@country-border-case-color;
-    line-join: round;
-    line-cap: round;
-      [zoom=3] { line-width: 1.0; }
-      [zoom=4]{ line-width: 1.2; }
-      [zoom=5] { line-width: 1.4; }
-      [zoom=6] { line-width: 1.6;  }
-      [zoom=7] { line-width: 2.9;  }
-      [zoom=8] { line-width: 3.5;  }
-      [zoom>=9] { line-width: 5.5;  }    
+     line-color:@country-border-case-color;
+     line-join: round;
+     line-cap: round;
+     [zoom=3] { line-width: 1.0; }
+     [zoom=4] { line-width: 1.2; }
+     [zoom=5] { line-width: 1.4; }
+     [zoom=6] { line-width: 1.6;  }
+     [zoom=7] { line-width: 2.9;  }
+     [zoom=8] { line-width: 3.5;  }
+     [zoom>=9] { line-width: 5.5;  }    
   }
   ::fill {
-    line-color:@country-border-fill-color;
-    line-join: round;
-    line-cap: round;
-    [zoom=3] { line-width: 1.0; line-opacity: 0.30; }
-    [zoom=4] { line-width: 1.0; line-opacity: 0.30; }
-    [zoom=5] { line-width: 1.0; line-opacity: 0.35; }
-    [zoom=6] { line-width: 1.0; line-opacity: 0.5; }
-    [zoom=7] { line-width: 1.3;  line-opacity: 0.9; } 
-    [zoom=8] { line-width: 2.0;  line-opacity: 0.8; } 
-    [zoom>=9] { line-width: 3.5; line-opacity: 1.0; } 
+     line-color:@country-border-fill-color;
+     line-join: round;
+     line-cap: round;
+     [zoom=3] { line-width: 1.0; line-opacity: 0.30; }
+     [zoom=4] { line-width: 1.0; line-opacity: 0.30; }
+     [zoom=5] { line-width: 1.0; line-opacity: 0.35; }
+     [zoom=6] { line-width: 1.0; line-opacity: 0.5; }
+     [zoom=7] { line-width: 1.3;  line-opacity: 0.9; } 
+     [zoom=8] { line-width: 2.0;  line-opacity: 0.9; } 
+     [zoom>=9] { line-width: 3.5; line-opacity: 1.0; } 
   }
 }
   // ===== Disputed country borders
   
   [zoom=4] [kind='disputed'] {
     ::case {
-    line-width: 1;
+     line-width: 1;
      line-color: @country-border-case-color;
-    line-dasharray: 3, 4;
-    line-join: round;
-    line-cap: round;
+     line-dasharray: 3, 4;
+     line-join: round;
+     line-cap: round;
   }
     ::fill {
-    line-width: 0.5;
-    line-color:@country-border-fill-color;
-    line-join: round;
-    line-cap: round;
-    line-color: rgba(7,6,6,0.5);
-    line-dasharray: 3, 4;
-      }
-    }
+     line-width: 0.5;
+     line-color:@country-border-fill-color;
+     line-join: round;
+     line-cap: round;
+     line-color: rgba(7,6,6,0.5);
+     line-dasharray: 3, 4;
+     }
+  }
   
   //===== State borders
   
@@ -138,10 +138,10 @@
   //===== County borders
   
   [admin_level=6][zoom>=10] {
+    line-color: @state-border-fill-color;
     line-width: 0.8;
     line-offset: 0.4;
     line-dasharray: 5, 2;
-  line-color: @state-border-fill-color;
     } 
   
   //===== Turn off maritime boundaries

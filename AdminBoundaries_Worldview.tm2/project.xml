@@ -4,7 +4,7 @@
 
 <Parameters>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">39.5508,-5.2195,8</Parameter>
+  <Parameter name="center">133.0527,32.7272,9</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">20</Parameter>
   <Parameter name="minzoom">0</Parameter>
@@ -44,7 +44,7 @@
     <LineSymbolizer stroke="#747926" stroke-width="0.25" stroke-opacity="1" />
   </Rule>
   <Rule>
-    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <Filter>([kind] = 'highway')</Filter>
     <LineSymbolizer stroke="#747926" stroke-width="0.5" stroke-opacity="1" />
   </Rule>
@@ -61,12 +61,12 @@
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
     <Filter>([maritime_boundary] = 'yes') and ([admin_level] = 6)</Filter>
-    <LineSymbolizer stroke-width="0.8" offset="0.4" stroke-dasharray="5, 2" stroke="#aaaaaa" />
+    <LineSymbolizer stroke="#aaaaaa" stroke-width="0.8" offset="0.4" stroke-dasharray="5, 2" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
     <Filter>([admin_level] = 6)</Filter>
-    <LineSymbolizer stroke-width="0.8" offset="0.4" stroke-dasharray="5, 2" stroke="#aaaaaa" />
+    <LineSymbolizer stroke="#aaaaaa" stroke-width="0.8" offset="0.4" stroke-dasharray="5, 2" />
   </Rule>
 </Style>
 <Style name="boundaries-fill" filter-mode="first">
@@ -291,7 +291,7 @@
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <MinScaleDenominator>1500000</MinScaleDenominator>
     <Filter>([maritime_boundary] = 'yes') and ([kind] = 'disputed') and ([admin_level] = 2)</Filter>
-    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" stroke-opacity="0.8" stroke-linejoin="round" stroke-linecap="round" />
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" stroke-opacity="0.9" stroke-linejoin="round" stroke-linecap="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000000</MaxScaleDenominator>
@@ -348,7 +348,7 @@
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <MinScaleDenominator>1500000</MinScaleDenominator>
     <Filter>([maritime_boundary] = 'yes') and ([admin_level] = 2)</Filter>
-    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" stroke-opacity="0.8" stroke-linejoin="round" stroke-linecap="round" />
+    <LineSymbolizer comp-op="clear" stroke-width="2" stroke="#bdd0cd" stroke-opacity="0.9" stroke-linejoin="round" stroke-linecap="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>6500000</MaxScaleDenominator>
@@ -405,7 +405,7 @@
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <MinScaleDenominator>1500000</MinScaleDenominator>
     <Filter>([kind] = 'disputed') and ([admin_level] = 2)</Filter>
-    <LineSymbolizer stroke-width="2" stroke-opacity="0.8" stroke="#112222" stroke-linejoin="round" stroke-linecap="round" />
+    <LineSymbolizer stroke-width="2" stroke-opacity="0.9" stroke="#112222" stroke-linejoin="round" stroke-linecap="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>6500000</MaxScaleDenominator>
@@ -451,7 +451,7 @@
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <MinScaleDenominator>1500000</MinScaleDenominator>
     <Filter>([admin_level] = 2)</Filter>
-    <LineSymbolizer stroke-width="2" stroke-opacity="0.8" stroke="#112222" stroke-linejoin="round" stroke-linecap="round" />
+    <LineSymbolizer stroke-width="2" stroke-opacity="0.9" stroke="#112222" stroke-linejoin="round" stroke-linecap="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>6500000</MaxScaleDenominator>

@@ -1,22 +1,58 @@
+@text-fill: #eee;
+@text-halo-radius: 1.5; //3;
+@text-halo-radius-zoomed: 1.7;
+@text-halo-fill: #222; //#444;
+@text-wrap-width: 30;
+@text-min-distance: 5;
+@text-placements: "X,N,S,E,W,NE,SE,NW,SW";
+@placement-offset: 3;
+@tile-pad: 2;
 
+@marine-label-text-fill: red; //#eef;
+@marine-opacity: 0.9; //0.7;
+
+//--- Sea and Lake Labels
 #water [boundary='yes'] {
   line-width: 1;
   line-color: rgba(136,170,238,0.5);
   }
-  [kind='sea']{
+
+  [kind='sea'] {
   text-name: [name];
   text-face-name: 'Clan Offc Pro Medium'; 
   text-size: 10;
-  text-fill: #eee;
-  text-halo-fill: #222;
-  text-halo-radius: 1.5;
-  text-wrap-width: 30;
+  text-fill: @marine-label-text-fill;
+  text-halo-fill: @text-halo-fill;
+  text-halo-radius: @text-halo-radius;
+  text-wrap-width: @text-wrap-width;
   text-wrap-before: true;
   text-avoid-edges: true;
-  text-min-distance: 0.5;
+  text-min-distance: 40;
+  text-opacity: @marine-opacity;
    [[name]='South Sea']  { text-name: '"South China Sea"'; }
+  
+  [scalerank=0][zoom>=2] { text-size: 11; text-opacity: @marine-opacity * 0.8; }
+  [scalerank=1][zoom>=3] { text-size: 11; text-opacity: @marine-opacity; }
+  [scalerank=2][zoom>=4] { text-size: 10; text-opacity: @marine-opacity; }
+  [scalerank=3][zoom>=4] { text-size: 10; text-opacity: @marine-opacity; }
+  [scalerank=4][zoom>=5] { text-size: 10; text-opacity: @marine-opacity; }
+  [scalerank=5][zoom>=6] { text-size: 10; text-opacity: @marine-opacity; }
+  [scalerank=6][zoom>=7] { text-size: 10; text-opacity: @marine-opacity; }
+  [scalerank>=7][zoom>=8] { text-size: 10; text-opacity: @marine-opacity; }
   }
-  [kind='lake'] [area>=2000000000]{
+
+  [kind='lake'] [area>=2000000000] {
+  text-name: [name];
+  text-face-name: 'Clan Offc Pro Medium'; 
+  text-size: 10;
+  text-fill: @marine-label-text-fill;
+  text-halo-fill: @text-halo-fill;
+  text-halo-radius: @text-halo-radius;
+  text-wrap-width: @text-wrap-width;
+  text-wrap-before: true;
+  text-avoid-edges: true;
+  text-min-distance: 40;
+  text-opacity: @marine-opacity;
   }
 
 #earth [boundary='yes'] {
@@ -68,14 +104,14 @@
 #places [[name:en] != null][kind = 'country'] {
     text-name: [name:en];
     text-face-name: 'Clan Offc Pro Medium'; 
-    text-size: 10;
-    text-fill: #eee;
-    text-halo-fill: #222; //#444;
-    text-halo-radius: 1.5; //3;
-    text-wrap-width: 30;
+    text-size: 9;
+    text-fill: @text-fill;
+    text-halo-fill: @text-halo-fill; //#444;
+    text-halo-radius: @text-halo-radius; //3;
+    text-wrap-width: @text-wrap-width;
     text-wrap-before: true;
     text-avoid-edges: true;
-    text-min-distance: 0.5;
+    text-min-distance: @text-min-distance;
     [[name:en]='Republic of China']  { text-name: 'Taiwan'; }
     [[name:en]='Macedonia']          { text-name: '"Macedonia (FYROM)"'; }
 }
@@ -84,13 +120,13 @@
     text-name: [name];
     text-face-name: 'Clan Offc Pro Medium'; 
     text-size: 10;
-    text-fill: #eee;
-    text-halo-fill: #222; //#444;
-    text-halo-radius: 1.5; //3;
-    text-wrap-width: 30;
+    text-fill: @text-fill;
+    text-halo-fill: @text-halo-fill; //#444;
+    text-halo-radius: @text-halo-radius; //3;
+    text-wrap-width: @text-wrap-width;
     text-wrap-before: true;
     text-avoid-edges: false;
-    text-min-distance: 0.5; 
+    text-min-distance: @text-min-distance; 
 }
 
 /*
