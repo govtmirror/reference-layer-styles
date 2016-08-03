@@ -137,7 +137,7 @@
       
   //===== County borders
   
-  [admin_level=6][zoom>=10] {
+  [admin_level=6][zoom>=10][maritime_boundary!='yes']  {
     line-color: @state-border-fill-color;
     line-width: 0.8;
     line-offset: 0.4;

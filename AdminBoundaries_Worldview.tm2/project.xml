@@ -4,7 +4,7 @@
 
 <Parameters>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-79.9585,32.5237,9</Parameter>
+  <Parameter name="center">-80.4117,27.2723,10</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">20</Parameter>
   <Parameter name="minzoom">0</Parameter>
@@ -60,24 +60,13 @@
 <Style name="boundaries" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
-    <Filter>([maritime_boundary] = 'yes') and ([admin_level] = 6)</Filter>
-    <LineSymbolizer comp-op="clear" stroke-width="9" stroke="#bdd0cd" offset="0.4" stroke-dasharray="5, 2" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>3000000</MaxScaleDenominator>
-    <MinScaleDenominator>750000</MinScaleDenominator>
-    <Filter>([maritime_boundary] = 'yes') and ([admin_level] = 6)</Filter>
-    <LineSymbolizer comp-op="clear" stroke-width="9" stroke="#bdd0cd" />
+    <Filter>([admin_level] = 6) and ([maritime_boundary] != 'yes')</Filter>
+    <LineSymbolizer stroke="#aaaaaa" stroke-width="0.8" offset="0.4" stroke-dasharray="5, 2" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <Filter>([maritime_boundary] = 'yes')</Filter>
     <LineSymbolizer comp-op="clear" stroke-width="9" stroke="#bdd0cd" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>750000</MaxScaleDenominator>
-    <Filter>([admin_level] = 6)</Filter>
-    <LineSymbolizer stroke="#aaaaaa" stroke-width="0.8" offset="0.4" stroke-dasharray="5, 2" />
   </Rule>
 </Style>
 <Style name="boundaries-fill" filter-mode="first">
