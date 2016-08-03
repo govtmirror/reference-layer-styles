@@ -53,22 +53,31 @@
 
 // ===== Country borders
 
-
 #boundaries {
   [admin_level=2] {
   ::case {
    line-color:@country-border-case-color;
     line-join: round;
     line-cap: round;
-      [zoom=4]{ line-width: 1.0; }
-      [zoom=5] { line-width: 1.6; }
+      [zoom=3] { line-width: 1.0; }
+      [zoom=4]{ line-width: 1.2; }
+      [zoom=5] { line-width: 1.4; }
+      [zoom=6] { line-width: 1.6;  }
+      [zoom=7] { line-width: 2.9;  }
+      [zoom=8] { line-width: 3.5;  }
+      [zoom>=9] { line-width: 5.5;  }    
   }
   ::fill {
     line-color:@country-border-fill-color;
     line-join: round;
     line-cap: round;
-    [zoom>=4] { line-width: 1.0; line-opacity: 0.30; }
+    [zoom=3] { line-width: 1.0; line-opacity: 0.30; }
+    [zoom=4] { line-width: 1.0; line-opacity: 0.30; }
     [zoom=5] { line-width: 1.0; line-opacity: 0.35; }
+    [zoom=6] { line-width: 1.0; line-opacity: 0.5; }
+    [zoom=7] { line-width: 1.3;  line-opacity: 0.9; } 
+    [zoom=8] { line-width: 2.0;  line-opacity: 0.8; } 
+    [zoom>=9] { line-width: 3.5; line-opacity: 1.0; } 
   }
 }
   // ===== Disputed country borders
@@ -101,11 +110,11 @@
       
     [zoom=4] { line-width: 0.4; }
     [zoom=5] { line-width: 0.4; }
-  	[zoom=6] { line-width: 0.7; }
-    [zoom=7] { line-width: 0.6; }
-    [zoom=8] { line-width: 0.9; }
-  	[zoom=9] { line-width: 0.7; }
-    [zoom=10] { line-width: 0.8; }
+  	[zoom=6] { line-width: 0.6; }
+    [zoom=7] { line-width: 0.7; }
+    [zoom=8] { line-width: 0.8; }
+  	[zoom=9] { line-width: 0.9; }
+    [zoom=10] { line-width: 0.9; }
     [zoom=11] { line-width: 0.9; }
     [zoom>=12] { line-width: 1; }
   }
@@ -123,7 +132,6 @@
     [zoom=10] { line-width: 0.6; }
     [zoom=11] { line-width: 0.7; }
     [zoom>=12] { line-width: 0.8; }
-   
   }
 }
       
@@ -139,9 +147,18 @@
   //===== Turn off maritime boundaries
   
    [maritime_boundary='yes'] [zoom>=8] {
+   ::case {
+    line-comp-op: clear;
+    line-width: 2;
+    line-color: #bdd0cd;
+    } 
+    
+    ::fill {
     line-comp-op: clear;
     line-width: 2;
     line-color: #bdd0cd;
     } 
 }
+}
+  
 
