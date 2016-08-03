@@ -1,4 +1,4 @@
-@smooth: 				0; 
+@smooth: 			   0; 
 @country-line-width: 1.0;
 @country-border-case-color: #bcc; //#444;
 @country-border-fill-color: #122; //#cc8
@@ -147,18 +147,8 @@
   //===== Turn off maritime boundaries
   
    [maritime_boundary='yes'] [zoom>=8] {
-   ::case {
     line-comp-op: clear;
-    line-width: 2;
+    line-width: 9;
     line-color: #bdd0cd;
-    } 
-    
-    ::fill {
-    line-comp-op: clear;
-    line-width: 2;
-    line-color: #bdd0cd;
-    } 
+      } 
 }
-}
-  
-
