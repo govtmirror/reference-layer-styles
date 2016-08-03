@@ -54,7 +54,7 @@
 // ===== Country borders
 
 #boundaries {
-  [admin_level=2] {
+  [admin_level=2][maritime_boundary!='yes']  {
   ::case {
      line-color:@country-border-case-color;
      line-join: round;
