@@ -3,7 +3,7 @@
 @text-halo-radius-zoomed: 1.7;
 @text-halo-fill: #222; //#444;
 @text-wrap-width: 30;
-@text-min-distance: 5;
+@text-repeat-distance: 5;
 @text-placements: "X,N,S,E,W,NE,SE,NW,SW";
 @placement-offset: 3;
 @tile-pad: 2;
@@ -27,7 +27,7 @@
   text-wrap-width: @text-wrap-width;
   text-wrap-before: true;
   text-avoid-edges: true;
-  text-min-distance: 40;
+  text-repeat-distance: 40;
   text-opacity: @marine-opacity;
    [[name]='South Sea']  { text-name: '"South China Sea"'; }
   
@@ -41,7 +41,18 @@
   [scalerank>=7][zoom>=8] { text-size: 10; text-opacity: @marine-opacity; }
   }
 
-  [kind='lake'] [area>=2000000000] {
+  [kind='lake'] { //[area>=2000000000]
+  [zoom>=5]  [area>10000000000],
+  [zoom>=6]  [area>5000000000],
+  [zoom>=7]  [area>400000000],
+  [zoom>=8]  [area>200000000],
+  [zoom>=9]  [area>100000000],
+  [zoom>=10] [area>100000000],
+  [zoom>=11] [area>10000000],
+  [zoom>=12] [area>2000000],
+  [zoom>=13] [area>1000000],
+  [zoom>=14] [area>500000],
+  [zoom>=15] [area>100000]{
   text-name: [name];
   text-face-name: 'Clan Offc Pro Medium'; 
   text-size: 10;
@@ -51,9 +62,10 @@
   text-wrap-width: @text-wrap-width;
   text-wrap-before: true;
   text-avoid-edges: true;
-  text-min-distance: 40;
   text-opacity: @marine-opacity;
   }
+  }
+  //---- vectors to be removed once the labels look good!
 
 #earth [boundary='yes'] {
   line-width: 1;
@@ -65,9 +77,20 @@
   line-color: rgba(204,187,255,0.5);
 }
 
-#pois {
+//---- Volcanoes
+#pois [kind='volcano'] {
   line-width: 1;
   line-color: rgba(85,68,68,0.5);
+  text-name: [name];
+  text-face-name: 'Clan Offc Pro Medium'; 
+  text-size: 20;
+  text-fill: blue;
+  text-halo-fill: @text-halo-fill; //#444;
+  text-halo-radius: @text-halo-radius; //3;
+  text-wrap-width: @text-wrap-width;
+  text-wrap-before: true;
+  text-avoid-edges: true;
+  text-repeat-distance: @text-repeat-distance;
 }
 
 
@@ -111,7 +134,7 @@
     text-wrap-width: @text-wrap-width;
     text-wrap-before: true;
     text-avoid-edges: true;
-    text-min-distance: @text-min-distance;
+    text-repeat-distance: @text-repeat-distance;
     [[name:en]='Republic of China']  { text-name: 'Taiwan'; }
     [[name:en]='Macedonia']          { text-name: '"Macedonia (FYROM)"'; }
 }
@@ -125,8 +148,8 @@
     text-halo-radius: @text-halo-radius; //3;
     text-wrap-width: @text-wrap-width;
     text-wrap-before: true;
-    text-avoid-edges: false;
-    text-min-distance: @text-min-distance; 
+    text-avoid-edges: true;
+    text-repeat-distance: @text-repeat-distance; 
 }
 
 /*
