@@ -17,7 +17,7 @@
   line-color: rgba(136,170,238,0.5);
   }
 
-#water [kind='sea'] {
+#water [kind='sea'], [kind='ocean'] {
   text-name: [name];
   text-face-name: 'Clan Offc Pro Medium'; 
   text-size: 10;
