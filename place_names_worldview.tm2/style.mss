@@ -17,7 +17,7 @@
   line-color: rgba(136,170,238,0.5);
   }
 
-  [kind='sea'] {
+#water [kind='sea'] {
   text-name: [name];
   text-face-name: 'Clan Offc Pro Medium'; 
   text-size: 10;
@@ -41,30 +41,47 @@
   [scalerank>=7][zoom>=8] { text-size: 10; text-opacity: @marine-opacity; }
   }
 
-  [kind='lake'] { //[area>=2000000000]
-  [zoom>=5]  [area>10000000000],
-  [zoom>=6]  [area>5000000000],
-  [zoom>=7]  [area>400000000],
-  [zoom>=8]  [area>200000000],
-  [zoom>=9]  [area>100000000],
-  [zoom>=10] [area>100000000],
-  [zoom>=11] [area>10000000],
-  [zoom>=12] [area>2000000],
-  [zoom>=13] [area>1000000],
-  [zoom>=14] [area>500000],
-  [zoom>=15] [area>100000]{
+#water [kind='lake'][area != null][label_placement='yes'] { //[area>=2000000000]
+
+  [zoom=5]  [area>10000000000],
+  [zoom=6]  [area>5000000000],
+  [zoom=7]  [area>400000000],
+  [zoom=8]  [area>200000000],
+  [zoom=9]  [area>100000000],
+  [zoom=10] [area>100000000],
+  [zoom=11] [area>10000000],
+  [zoom=12] [area>2000000],
+  [zoom=13] [area>1000000],
+  [zoom=14] [area>500000],
+  [zoom=15] [area>100000]
+  {
+
+    
   text-name: [name];
   text-face-name: 'Clan Offc Pro Medium'; 
   text-size: 10;
   text-fill: @marine-label-text-fill;
+    
+  //text-repeat-distance: 40;  // min distance between same text, tho doesn't span tile boundaries
+  //text-margin: 40;  // min distance from any other text, tho doesn't span tile boundaries
+  //text-min-padding: 20;  // min distance from edge of tile
+  text-avoid-edges: true;
+  //text-placement: point;
+  
+//  text-placement-type: simple;
+//  text-placements: "E,NE,SE,W,NW,SW";
+//  text-simplify: 20;
+//  text-simplify-algorithm: zhao-saalfeld;
+  
+/*
   text-halo-fill: @text-halo-fill;
   text-halo-radius: @text-halo-radius;
   text-wrap-width: @text-wrap-width;
   text-wrap-before: true;
-  text-avoid-edges: true;
   text-opacity: @marine-opacity;
-  }
-  }
+*/
+}
+}
   //---- vectors to be removed once the labels look good!
 
 #earth [boundary='yes'] {
