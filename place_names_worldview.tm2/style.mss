@@ -17,10 +17,10 @@
   line-color: rgba(136,170,238,0.5);
   }
 
-#water [kind='sea'], [kind='ocean'] {
+#water [kind='sea'], [kind='ocean'], [kind='bay'] {
   text-name: [name];
-  text-face-name: 'Clan Offc Pro Medium'; 
-  text-size: 10;
+  text-face-name: 'Open Sans Regular'; 
+  text-size: 14;
   text-fill: @marine-label-text-fill;
   text-halo-fill: @text-halo-fill;
   text-halo-radius: @text-halo-radius;
@@ -29,7 +29,11 @@
   text-avoid-edges: true;
   text-repeat-distance: 40;
   text-opacity: @marine-opacity;
+
    [[name]='South Sea']  { text-name: '"South China Sea"'; }
+   [[name]='Ικάριο πέλαγος']  { text-name: '"Icarian Sea"'; }
+   [[name]='Bay of Bengal']  { text-align: 'center'; text-dx: -1; }
+    
   
   [scalerank=0][zoom>=2] { text-size: 11; text-opacity: @marine-opacity * 0.8; }
   [scalerank=1][zoom>=3] { text-size: 11; text-opacity: @marine-opacity; }
@@ -61,6 +65,8 @@
   text-face-name: 'Clan Offc Pro Medium'; 
   text-size: 10;
   text-fill: @marine-label-text-fill;
+    
+
     
   //text-repeat-distance: 40;  // min distance between same text, tho doesn't span tile boundaries
   //text-margin: 40;  // min distance from any other text, tho doesn't span tile boundaries
