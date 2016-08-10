@@ -11,15 +11,59 @@
 @marine-label-text-fill: red; //#eef;
 @marine-opacity: 0.9; //0.7;
 
-//--- Sea and Lake Labels
+
+//--- Ocean, Sea and Lake Labels
+
 #water [boundary='yes'] {
   line-width: 1;
   line-color: rgba(136,170,238,0.5);
   }
 
-#water [kind='sea'], [kind='ocean'] {
+#water [[name] != null][kind='water'][label_placement='yes'][area>=2000000000]{
   text-name: [name];
-  text-face-name: 'Clan Offc Pro Medium'; 
+  text-face-name: 'Open Sans Regular'; 
+  text-size: 10;
+  text-fill: @marine-label-text-fill;
+  text-halo-fill: @text-halo-fill;
+  text-halo-radius: @text-halo-radius;
+  text-wrap-width: @text-wrap-width;
+  text-wrap-before: true;
+  text-avoid-edges: true;
+  text-repeat-distance: 40;
+  text-opacity: @marine-opacity;
+  }
+
+#water [[name] != null][kind='water'][label_placement='yes'][area>=2000000000]{
+  text-name: [name:en];
+  text-face-name: 'Open Sans Regular'; 
+  text-size: 10;
+  text-fill: @marine-label-text-fill;
+  text-halo-fill: @text-halo-fill;
+  text-halo-radius: @text-halo-radius;
+  text-wrap-width: @text-wrap-width;
+  text-wrap-before: true;
+  text-avoid-edges: true;
+  text-repeat-distance: 40;
+  text-opacity: @marine-opacity;
+  }
+
+#water [kind='ocean'] {
+  text-name: [name];
+  text-face-name: 'Open Sans Regular'; 
+  text-size: 10;
+  text-fill: @marine-label-text-fill;
+  text-halo-fill: @text-halo-fill;
+  text-halo-radius: @text-halo-radius;
+  text-wrap-width: @text-wrap-width;
+  text-wrap-before: true;
+  text-avoid-edges: true;
+  text-repeat-distance: 40;
+  text-opacity: @marine-opacity;
+  }
+
+#water [kind='sea'][label_placement='yes'] {
+  text-name: [name];
+  text-face-name: 'Open Sans Regular'; 
   text-size: 10;
   text-fill: @marine-label-text-fill;
   text-halo-fill: @text-halo-fill;
@@ -30,6 +74,18 @@
   text-repeat-distance: 40;
   text-opacity: @marine-opacity;
    [[name]='South Sea']  { text-name: '"South China Sea"'; }
+   [[name]='Ικάριο πέλαγος']  { text-name: '"Icarian Sea"'; }
+   [[name]='Азовское море']  { text-name: '"Sea of Azov"'; }
+   [[name]='Чукотское море']  { text-name: '"Chukchi Sea"'; }
+   [[name]='Карское море']     {text-name: '"Kara Sea"'; }
+   [[name]='Печорское море']     {text-name: '"Pechora Sea"'; }
+   [[name]='Белое море']     {text-name: '"White Sea"'; }
+   [[name]='Море Лаптевых']     {text-name: '"Laptev Sea"'; }
+   [[name]='Восточно-Сибирское море']     {text-name: '"East Siberian Sea"'; }
+   [[name]='Баренцево море']     {text-name: '"Barents Sea"'; }
+   [[name]='Каспийское Море']  { text-name: '"Caspian Sea"'; }
+   [[name]='Κρητικό πέλαγος']  { text-name: '"Sea of Crete"'; }
+   [[name]='Аральское море'] { text-name: '""'; } // already labeled as Aral Sea under Lake
   
   [scalerank=0][zoom>=2] { text-size: 11; text-opacity: @marine-opacity * 0.8; }
   [scalerank=1][zoom>=3] { text-size: 11; text-opacity: @marine-opacity; }
@@ -39,6 +95,12 @@
   [scalerank=5][zoom>=6] { text-size: 10; text-opacity: @marine-opacity; }
   [scalerank=6][zoom>=7] { text-size: 10; text-opacity: @marine-opacity; }
   [scalerank>=7][zoom>=8] { text-size: 10; text-opacity: @marine-opacity; }
+  [scalerank>=8][zoom>=9] { text-size: 10; text-opacity: @marine-opacity; }
+  [scalerank>=9][zoom>=10] { text-size: 10; text-opacity: @marine-opacity; }
+  [scalerank>=10][zoom>=11] { text-size: 10; text-opacity: @marine-opacity; }
+  [scalerank>=11][zoom>=12] { text-size: 10; text-opacity: @marine-opacity; }
+  [scalerank>=12][zoom>=13] { text-size: 10; text-opacity: @marine-opacity; }
+  [scalerank>=13][zoom>=14] { text-size: 10; text-opacity: @marine-opacity; }
   }
 
 #water [kind='lake'][area != null][label_placement='yes'] { //[area>=2000000000]
@@ -55,10 +117,8 @@
   [zoom=14] [area>500000],
   [zoom=15] [area>100000]
   {
-
-    
   text-name: [name];
-  text-face-name: 'Clan Offc Pro Medium'; 
+  text-face-name: 'Open Sans Regular'; 
   text-size: 10;
   text-fill: @marine-label-text-fill;
     
@@ -82,6 +142,19 @@
 */
 }
 }
+#water [kind='bay'] {
+  text-name: [name:en];
+  text-face-name: 'Open Sans Regular'; 
+  text-size: 10;
+  text-fill: @marine-label-text-fill;
+  text-halo-fill: @text-halo-fill;
+  text-halo-radius: @text-halo-radius;
+  text-wrap-width: @text-wrap-width;
+  text-wrap-before: true;
+  text-avoid-edges: true;
+  text-repeat-distance: 40;
+  text-opacity: @marine-opacity;
+  }
   //---- vectors to be removed once the labels look good!
 
 #earth [boundary='yes'] {
@@ -99,7 +172,7 @@
   line-width: 1;
   line-color: rgba(85,68,68,0.5);
   text-name: [name];
-  text-face-name: 'Clan Offc Pro Medium'; 
+  text-face-name: 'Open Sans Regular'; 
   text-size: 20;
   text-fill: blue;
   text-halo-fill: @text-halo-fill; //#444;
@@ -143,8 +216,8 @@
 
 #places [[name:en] != null][kind = 'country'] {
     text-name: [name:en];
-    text-face-name: 'Clan Offc Pro Medium'; 
-    text-size: 9;
+    text-face-name: 'Open Sans Regular'; 
+    text-size: 10;
     text-fill: @text-fill;
     text-halo-fill: @text-halo-fill; //#444;
     text-halo-radius: @text-halo-radius; //3;
@@ -158,7 +231,7 @@
 
 #places [[name:en] = null][kind = 'country']{
     text-name: [name];
-    text-face-name: 'Clan Offc Pro Medium'; 
+    text-face-name: 'Open Sans Regular'; 
     text-size: 10;
     text-fill: @text-fill;
     text-halo-fill: @text-halo-fill; //#444;
@@ -202,7 +275,10 @@
 // Cities
   #places [[name:en] != null] [kind='city'][zoom>=6][zoom<=15] {
     text-name:[name:en];	
-    text-face-name: 'Clan Offc Pro Medium';
+    text-face-name: 'Open Sans Regular';
+    text-fill: @text-fill;
+    text-halo-fill: @text-halo-fill; //#444;
+    text-halo-radius: @text-halo-radius; //3;
     text-size: 10;
     text-line-spacing:-7;
     text-avoid-edges: true;
@@ -222,7 +298,10 @@
 
 #places [[name:en] = null] [kind='city'][zoom>=6][zoom<=15] {
     text-name:[name];	
-    text-face-name: 'Clan Offc Pro Medium';
+    text-face-name: 'Open Sans Regular';
+    text-fill: @text-fill;
+    text-halo-fill: @text-halo-fill; //#444;
+    text-halo-radius: @text-halo-radius; //3;
     text-size: 10;
     text-line-spacing:-7;
     text-avoid-edges: true;
