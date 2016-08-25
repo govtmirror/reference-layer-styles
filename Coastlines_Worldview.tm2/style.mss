@@ -7,7 +7,7 @@ Map {
   background-color: @land;
 }
 
-#water [boundary='yes']{
+#water [boundary=1]{
 
   line-width: 1;
   line-color: #fff;
@@ -19,7 +19,7 @@ Map {
 
 */
   
-#water [boundary='yes'][zoom>=0][zoom<=8] { 
+#water [boundary=1][zoom>=0][zoom<=8] { 
  ::underlay1 {
     line-color: @coastline-color-light;
     line-width: 0.75;
@@ -36,7 +36,7 @@ Map {
     }
 }
 
-#water [boundary='yes'][zoom>=9][zoom<=15] {
+#water [boundary=1][zoom>=9][zoom<=15] {
  
  
     ::underlay1 {

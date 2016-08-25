@@ -4,44 +4,21 @@
 
 <Parameters>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">49.1309,35.6573,5</Parameter>
+  <Parameter name="center">50.4053,30.6757,3</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">20</Parameter>
   <Parameter name="minzoom">0</Parameter>
-  <Parameter name="source"><![CDATA[http://localhost/mapzen-tilejsons/mapbox-studio-mapzen-tiles-custom1.json]]></Parameter>
+  <Parameter name="source"><![CDATA[http://tile.dev.mapzen.com/vector/v1/tilejson/mapbox.json]]></Parameter>
 </Parameters>
 
 
-<Style name="water-overlay" filter-mode="first">
-  <Rule>
-    <MaxScaleDenominator>1500000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([boundary] = 'yes')</Filter>
-    <LineSymbolizer stroke="#001111" stroke-width="0.75" stroke-opacity="1" offset="0.75" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>1500000</MinScaleDenominator>
-    <Filter>([boundary] = 'yes')</Filter>
-    <LineSymbolizer stroke="#001111" stroke-width="0.75" stroke-opacity="1" offset="0.75" stroke-linejoin="round" />
-  </Rule>
-</Style>
-<Style name="water-underlay1" filter-mode="first">
-  <Rule>
-    <MaxScaleDenominator>1500000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([boundary] = 'yes')</Filter>
-    <LineSymbolizer stroke="#bbcccc" stroke-width="0.75" stroke-opacity="1" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>1500000</MinScaleDenominator>
-    <Filter>([boundary] = 'yes')</Filter>
-    <LineSymbolizer stroke="#bbcccc" stroke-width="0.75" stroke-opacity="1" stroke-linejoin="round" />
-  </Rule>
-</Style>
-<Layer name="water"
+<Layer name="boundaries"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName>water-underlay1</StyleName>
-    <StyleName>water-overlay</StyleName>  </Layer>
+      </Layer>
+
+<Layer name="buildings"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
 
 <Layer name="earth"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
@@ -51,15 +28,7 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
       </Layer>
 
-<Layer name="roads"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="buildings"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="boundaries"
+<Layer name="places"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
       </Layer>
 
@@ -67,8 +36,43 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
       </Layer>
 
-<Layer name="places"
+<Layer name="roads"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
       </Layer>
+
+<Layer name="transit"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="water-overlay" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([boundary] = 1)</Filter>
+    <LineSymbolizer stroke="#001111" stroke-width="0.75" stroke-opacity="1" offset="0.75" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([boundary] = 1)</Filter>
+    <LineSymbolizer stroke="#001111" stroke-width="0.75" stroke-opacity="1" offset="0.75" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Style name="water-underlay1" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([boundary] = 1)</Filter>
+    <LineSymbolizer stroke="#bbcccc" stroke-width="0.75" stroke-opacity="1" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([boundary] = 1)</Filter>
+    <LineSymbolizer stroke="#bbcccc" stroke-width="0.75" stroke-opacity="1" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="water"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>water-underlay1</StyleName>
+    <StyleName>water-overlay</StyleName>  </Layer>
 
 </Map>

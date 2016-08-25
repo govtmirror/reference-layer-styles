@@ -19,7 +19,7 @@ layers: null
 maxzoom: 20
 minzoom: 0
 name: ''
-source: "http://localhost/mapzen-tilejsons/mapbox-studio-mapzen-tiles-custom1.json"
+source: "http://tile.dev.mapzen.com/vector/v1/tilejson/mapbox.json"
 styles: 
   - style.mss
 template: ''

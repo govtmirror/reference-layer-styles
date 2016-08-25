@@ -4,144 +4,15 @@
 
 <Parameters>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-77.6459,42.1777,8</Parameter>
+  <Parameter name="center">-82.2052,40.8637,6</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">20</Parameter>
   <Parameter name="minzoom">0</Parameter>
-  <Parameter name="source"><![CDATA[http://vector.mapzen.com/osm/tilejson/mapbox.json]]></Parameter>
+  <Parameter name="source"><![CDATA[http://tile.dev.mapzen.com/vector/v1/tilejson/mapbox.json]]></Parameter>
 </Parameters>
 
 
-<Style name="water" filter-mode="first">
-  <Rule>
-    <MaxScaleDenominator>500000000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 80000000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>500000000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 40000000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>3000000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 20000000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000000</MaxScaleDenominator>
-    <MinScaleDenominator>3000000</MinScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 20000000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>200000000</MaxScaleDenominator>
-    <MinScaleDenominator>50000000</MinScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 20000000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>3000000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 5000000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000000</MaxScaleDenominator>
-    <MinScaleDenominator>3000000</MinScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 5000000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>3000000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 700000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000000</MaxScaleDenominator>
-    <MinScaleDenominator>3000000</MinScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 700000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>3000000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 500000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500000</MaxScaleDenominator>
-    <MinScaleDenominator>3000000</MinScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 500000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>3000000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 160000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>6500000</MaxScaleDenominator>
-    <MinScaleDenominator>3000000</MinScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 160000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>3000000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 40000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 10000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>750000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 8000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>400000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 2000000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>200000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 200000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 100000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 2000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <Filter>([boundary] != 'yes') and ([area] &gt; 1000)</Filter>
-    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
-  </Rule>
-</Style>
-<Layer name="water"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName>water</StyleName>  </Layer>
-
-<Layer name="earth"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="places"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="landuse"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="roads"
+<Layer name="boundaries"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
       </Layer>
 
@@ -149,16 +20,145 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
       </Layer>
 
+<Layer name="earth"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="landuse"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="places"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
 <Layer name="pois"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
       </Layer>
 
-<Layer name="boundaries"
+<Layer name="roads"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
       </Layer>
 
 <Layer name="transit"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
       </Layer>
+
+<Style name="water" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>500000000</MaxScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 80000000000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500000000</MaxScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 40000000000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 20000000000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 20000000000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 20000000000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 5000000000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 5000000000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 700000000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 700000000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 500000000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 500000000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 160000000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 160000000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 40000000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 10000000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 8000000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 2000000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 200000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 100000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 2000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([boundary] != 1) and ([area] &gt; 1000)</Filter>
+    <PolygonSymbolizer fill="#ffffff" comp-op="clear" />
+  </Rule>
+</Style>
+<Layer name="water"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>water</StyleName>  </Layer>
 
 </Map>

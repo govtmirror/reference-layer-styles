@@ -14,12 +14,12 @@
 
 //--- Ocean, Sea and Lake Labels
 
-#water [boundary='yes'] {
+#water [boundary=1] {   // this used to be [boundary='yes'] in Mapzen pre 1.0
   line-width: 1;
   line-color: rgba(136,170,238,0.5);
   }
 
-#water [[name] != null][kind='water'][label_placement='yes'][area>=2000000000]{
+#water [[name] != null][kind='water'][label_placement=1][area>=2000000000]{
   text-name: [name];
   text-face-name: 'Open Sans Regular'; 
   text-size: 10;
@@ -33,7 +33,7 @@
   text-opacity: @marine-opacity;
   }
 
-#water [[name] != null][kind='water'][label_placement='yes'][area>=2000000000]{
+#water [[name] != null][kind='water'][label_placement=1][area>=2000000000]{
   text-name: [name:en];
   text-face-name: 'Open Sans Regular'; 
   text-size: 10;
@@ -61,7 +61,7 @@
   text-opacity: @marine-opacity;
   }
 
-#water [kind='sea'][label_placement='yes'] {
+#water [kind='sea'][label_placement=1] {
   text-name: [name];
   text-face-name: 'Open Sans Regular'; 
   text-size: 10;
@@ -105,7 +105,7 @@
   [scalerank>=13][zoom>=14] { text-size: 10; text-opacity: @marine-opacity; }
   }
 
-#water [kind='lake'][area != null][label_placement='yes'] { //[area>=2000000000]
+#water [kind='lake'][area != null][label_placement=1] { //[area>=2000000000]
 
   [zoom=5]  [area>10000000000],
   [zoom=6]  [area>5000000000],
@@ -161,7 +161,7 @@
   }
   //---- vectors to be removed once the labels look good!
 
-#earth [boundary='yes'] {
+#earth [boundary=1] {
   line-width: 1;
   line-color: rgba(204,170,170,0.5);
 }

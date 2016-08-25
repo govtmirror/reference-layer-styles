@@ -14,13 +14,13 @@
 
 // ===== Coastlines and lakes
 /*
-#earth [boundary='yes'] {
+#earth [boundary=1] {
   line-width: 1;
   line-color: rgba(236, 226, 226, 0.5);
 }
 */
 
-#water [boundary='yes'] {
+#water [boundary=1] {
 ::underlay1 {
     line-color: @coastline-color-light;
     line-width: 0.75;
@@ -54,7 +54,7 @@
 // ===== Country borders
 
 #boundaries {
-  [admin_level=2][maritime_boundary!='yes']  {
+  [admin_level=2][maritime_boundary!=1]  {
   ::case {
      line-color:@country-border-case-color;
      line-join: round;
@@ -82,7 +82,7 @@
 }
   // ===== Disputed country borders
   
-  [zoom=4] [kind='disputed'][maritime_boundary!='yes'] {
+  [zoom=4] [kind='disputed'][maritime_boundary!=1] {
     ::case {
      line-width: 1;
      line-color: @country-border-case-color;
@@ -102,7 +102,7 @@
   
   //===== State borders
   
-  [admin_level=4][zoom>=4][maritime_boundary!='yes'] {
+  [admin_level=4][zoom>=4][maritime_boundary!=1] {
     
     ::case {
     line-cap: round;
@@ -137,7 +137,7 @@
       
   //===== County borders
   
-  [admin_level=6][zoom>=10][maritime_boundary!='yes']  {
+  [admin_level=6][zoom>=10][maritime_boundary!=1]  {
     line-color: @state-border-fill-color;
     line-width: 0.8;
     line-offset: 0.4;
@@ -146,7 +146,7 @@
   
   //===== Turn off maritime boundaries
   
-   [maritime_boundary='yes'] [zoom>=8] {
+   [maritime_boundary=1] [zoom>=8] {
     line-comp-op: clear;
     line-width: 9;
     line-color: #bdd0cd;

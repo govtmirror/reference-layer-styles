@@ -5,7 +5,7 @@ Map {
   background-color: @land;
 }
 
-#water [boundary !='yes'] {
+#water [boundary !=1] {
   [zoom>=1] [area>40000000000],
   [zoom>=2] [area>20000000000],
   [zoom>=3] [area>80000000000],
