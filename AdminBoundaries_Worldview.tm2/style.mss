@@ -154,11 +154,25 @@
 }
 
   //====== Protected Areas
+
 #landuse {
-  [kind='national_park']{
+  [kind='national_park'] {
     line-color: green;
     line-width: 0.75;
     line-opacity: 1.0;
     line-join: round;
-     }
+    }
+    [kind='nature_reserve']{
+    line-color: blue;
+    line-width: 0.75;
+    line-opacity: 1.0;
+    line-join: round;
+    }
+      [kind='protected_area']{
+    line-color:red;
+    line-width: 0.75;
+    line-opacity: 1.0;
+    line-join: round;
+    }
+     
   }

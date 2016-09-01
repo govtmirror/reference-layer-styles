@@ -4,7 +4,7 @@
 
 <Parameters>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-90.2637,34.0618,6</Parameter>
+  <Parameter name="center">58.5791,23.5438,5</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">20</Parameter>
   <Parameter name="minzoom">0</Parameter>
@@ -34,6 +34,14 @@
       </Layer>
 
 <Style name="landuse" filter-mode="first">
+  <Rule>
+    <Filter>([kind] = 'protected_area')</Filter>
+    <LineSymbolizer stroke="#ff0000" stroke-width="0.75" stroke-opacity="1" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([kind] = 'nature_reserve')</Filter>
+    <LineSymbolizer stroke="#0000ff" stroke-width="0.75" stroke-opacity="1" stroke-linejoin="round" />
+  </Rule>
   <Rule>
     <Filter>([kind] = 'national_park')</Filter>
     <LineSymbolizer stroke="#008000" stroke-width="0.75" stroke-opacity="1" stroke-linejoin="round" />
