@@ -339,7 +339,7 @@
   */
   //===== Turn off maritime boundaries
   
-   [maritime_boundary='yes'] [zoom>=8] {
+   [maritime_boundary=1] [zoom>=8] {
     line-comp-op: clear;
     line-width: 2;
     line-color: #bdd0cd;
