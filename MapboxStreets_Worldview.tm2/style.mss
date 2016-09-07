@@ -57,7 +57,7 @@ Map {
  *         inner fill (inline).
  */
 
-@road_fill:     #eb1111;
+@road_fill:     #ffffff;
 
 /* ================================================================== */
 /* BOUNDARY COLORS
