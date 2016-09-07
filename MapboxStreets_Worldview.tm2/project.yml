@@ -1,0 +1,50 @@
+_prefs: 
+  mapid: ''
+  saveCenter: true
+_properties: {}
+attribution: ''
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+center: 
+  - 48.5101
+  - 54.3165
+  - 9
+description: ''
+format: "png8:m=h"
+interactivity_layer: ''
+layers: 
+  - landuse
+  - waterway
+  - water
+  - aeroway
+  - barrier_line
+  - building
+  - landuse_overlay
+  - tunnel
+  - road
+  - bridge
+  - admin
+  - country_label_line
+  - country_label
+  - marine_label
+  - state_label
+  - place_label
+  - water_label
+  - poi_label
+  - road_label
+  - waterway_label
+  - housenum_label
+maxzoom: 20
+minzoom: 0
+name: ''
+source: "http://localhost/mapzen-tilejsons/mapbox-studio-mapbox-tiles-custom.json"
+styles: 
+  - style.mss
+  - label.mss
+  - road.mss
+  - poi.mss
+  - admin.mss
+template: ''
