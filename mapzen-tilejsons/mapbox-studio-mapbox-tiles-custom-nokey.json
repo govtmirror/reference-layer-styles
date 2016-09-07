@@ -1,0 +1,154 @@
+{
+    "bounds" : [
+        -180.000000,
+        -85.000000,
+        180.000000,
+        85.000000
+    ],
+    "center" : [
+        -73.97210597991945,
+        40.764372592558985,
+        15
+    ],
+    "description" : "mapbox",
+    "format" : "pbf",
+    "maxzoom" : 20.000000,
+    "minzoom" : 0.000000,
+    "name" : "mapbox mapbox format",
+    "private" : true,
+    "scheme" : "xyz",
+    "tilejson" : "2.0.0",
+    "tiles" : [
+"http://a.tiles.mapbox.com/v4/mapbox.mapbox-streets-v7/{z}/{x}/{y}.mvt?access_token="
+    ],
+    "type" : "overlay",
+    "vector_layers" : [
+        {
+            "id" : "admin",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "road",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "landuse",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "waterway",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "water",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "aeroway",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "barrier_line",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "building",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "landuse_overlay",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "tunnel",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "bridge",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "country_label_line",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "country_label",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "marine_label",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "state_label",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "place_label",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "water_label",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "poi_label",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "road_label",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "waterway_label",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        },
+        {
+            "id" : "housenum_label",
+            "maxzoom" : 20.000000,
+            "minzoom" : 0.000000,
+            "description" : ""
+        }
+    ],
+    "version" : "1"
+}
