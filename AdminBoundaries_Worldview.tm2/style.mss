@@ -21,7 +21,7 @@
 */
 
 #water [boundary='yes'] {
-::underlay1 {
+  ::underlay1 {
     line-color: @coastline-color-light;
     line-width: 0.75;
     line-opacity: 1.0;
@@ -156,7 +156,7 @@
   //====== Protected Areas
 
 #landuse {
-  [kind='national_park'] {
+  [kind='national_park'], [protect_class='1'] {
     line-color: green;
     line-width: 0.75;
     line-opacity: 1.0;
@@ -168,11 +168,11 @@
     line-opacity: 1.0;
     line-join: round;
     }
-      [kind='protected_area']{
+    /*  [kind='protected_area']{
     line-color:red;
     line-width: 0.75;
     line-opacity: 1.0;
     line-join: round;
     }
-     
+     */
   }

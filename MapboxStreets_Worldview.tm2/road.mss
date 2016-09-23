@@ -4,6 +4,33 @@
 #road { opacity:.45; }
 #tunnel { opacity: 0.13; }
 
+
+   // ===== Roads
+
+#road [zoom>=7]{
+    [class='motorway'],[class='motorway_link'], [class='trunk']{
+   line-cap: round;
+    line-join: round;
+    line-gamma: 1.2;
+    line-color: @road_fill;
+    line-width: 1;
+     [zoom>12] { line-width: 1.5; }
+      [zoom=15] { line-width: 3; }
+}
+    [zoom>=8] [class='primary'],[class='secondary'] {
+   line-cap: round;
+    line-join: round;
+    line-gamma: 1.2;
+    line-color: @road_fill;
+    line-width: 0.5;
+      [zoom=12] { line-width: .5; }
+      [zoom=13] { line-width: .75; }
+      [zoom=14] { line-width: 1; }
+      [zoom=15] { line-width: 2; }
+  
+  }
+  }
+/*
 #bridge,
 #road[zoom>7],
 #tunnel {
@@ -73,7 +100,7 @@
 }
 
 // one way arrows
-
+/*
 #road,
 #bridge,
 #tunnel {
@@ -95,7 +122,7 @@
     }
   }
 }
-
+/*
 // =====================================================================
 // ROAD LABELS
 // =====================================================================

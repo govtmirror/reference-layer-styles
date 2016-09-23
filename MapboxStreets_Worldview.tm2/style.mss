@@ -13,7 +13,7 @@ Map {
 //}
 
 // Language
-@name: '[name]';
+@name: '[name_en]';
 
 /* set up font sets for various weights and styles */
 @sans_lt:           "Open Sans Regular","Arial Unicode MS Regular";

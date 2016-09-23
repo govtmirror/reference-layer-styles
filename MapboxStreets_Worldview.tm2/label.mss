@@ -250,7 +250,7 @@
   [zoom>=15] { text-size: 20; text-wrap-width: 200; }
   [zoom>=16] { text-size: 22; text-wrap-width: 240; }
 }
-
+/*
 // 2_5 Villages ______________________________________________________
 
 #place_label[type='village'][zoom>=10][zoom<=17][localrank<=2] {
@@ -316,7 +316,7 @@
     [zoom>=18] { text-size: 18; text-wrap-width: 160; }
   }
 }
-
+*/
 
 // =====================================================================
 // 4__ WATER LABELS

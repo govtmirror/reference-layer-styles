@@ -169,3 +169,43 @@
     text-line-spacing: 1;
   }
 }
+
+//---coastline and inland water bodies ---///
+/*
+#water { 
+  ::water {
+   opacity: 0.8;
+    line-join: round;
+    line-color: @admin_2;
+    [maritime=1] {
+      line-color: #026;
+      line-opacity: 0.05;
+       }
+    [zoom>=2] { line-width: 0.4; }
+    [zoom>=4] { line-width: 0.8; }
+    [zoom>=6] { line-width: 1.2; }
+    [zoom>=8] { line-width: 1.8; }
+    [zoom>=10] { line-width: 2.2; }
+    [zoom>=12] { line-width: 2.6; }
+    [zoom>=14] { line-width: 3.0; }
+  }
+  }
+
+ ::wateroff {
+    opacity: 0.5;
+    line-join: round;
+    line-color: #000;
+    line-offset: 1;
+    [maritime=1] {
+      line-color: #026;
+      line-opacity: 0.05;
+    [zoom>=2] { line-width: 0.4; }
+    [zoom>=4] { line-width: 0.8; }
+    [zoom>=6] { line-width: 1.2; }
+    [zoom>=8] { line-width: 1.8; }
+    [zoom>=10] { line-width: 2.2; }
+    [zoom>=12] { line-width: 2.6; }
+    [zoom>=14] { line-width: 3.0; }
+   }
+  }
+*/

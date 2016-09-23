@@ -21,7 +21,7 @@
 
 #water [[name] != null][kind='water'][label_placement='yes'][area>=2000000000]{
   text-name: [name];
-  text-face-name: 'Open Sans Regular'; 
+  text-face-name: 'Arial Unicode MS Regular'; 
   text-size: 10;
   text-fill: @marine-label-text-fill;
   text-halo-fill: @text-halo-fill;
@@ -35,7 +35,7 @@
 
 #water [[name] != null][kind='water'][label_placement='yes'][area>=2000000000]{
   text-name: [name:en];
-  text-face-name: 'Open Sans Regular'; 
+  text-face-name: 'Arial Unicode MS Regular'; 
   text-size: 10;
   text-fill: @marine-label-text-fill;
   text-halo-fill: @text-halo-fill;
@@ -49,7 +49,7 @@
 
 #water [kind='ocean'] {
   text-name: [name];
-  text-face-name: 'Open Sans Regular'; 
+  text-face-name: 'Arial Unicode MS Regular'; 
   text-size: 10;
   text-fill: @marine-label-text-fill;
   text-halo-fill: @text-halo-fill;
@@ -63,7 +63,7 @@
 
 #water [kind='sea'][label_placement='yes'] {
   text-name: [name];
-  text-face-name: 'Open Sans Regular'; 
+  text-face-name: 'Arial Unicode MS Regular'; 
   text-size: 10;
   text-fill: @marine-label-text-fill;
   text-halo-fill: @text-halo-fill;
@@ -120,7 +120,7 @@
   [zoom=15] [area>100000]
   {
   text-name: [name];
-  text-face-name: 'Open Sans Regular'; 
+  text-face-name: 'Meta Offc Pro Medium'; 
   text-size: 10;
   text-fill: @marine-label-text-fill;
     
@@ -148,7 +148,7 @@
 }
 #water [kind='bay'] {
   text-name: [name:en];
-  text-face-name: 'Open Sans Regular'; 
+  text-face-name: 'Meta Offc Pro Medium'; 
   text-size: 10;
   text-fill: @marine-label-text-fill;
   text-halo-fill: @text-halo-fill;
@@ -176,7 +176,7 @@
   line-width: 1;
   line-color: rgba(85,68,68,0.5);
   text-name: [name];
-  text-face-name: 'Open Sans Regular'; 
+  text-face-name: 'Meta Offc Pro Medium'; 
   text-size: 20;
   text-fill: blue;
   text-halo-fill: @text-halo-fill; //#444;
@@ -220,7 +220,7 @@
 
 #places [[name:en] != null][kind = 'country'] {
     text-name: [name:en];
-    text-face-name: 'Open Sans Regular'; 
+    text-face-name: 'Meta Offc Pro Medium'; 
     text-size: 10;
     text-fill: @text-fill;
     text-halo-fill: @text-halo-fill; //#444;
@@ -235,7 +235,7 @@
 
 #places [[name:en] = null][kind = 'country']{
     text-name: [name];
-    text-face-name: 'Open Sans Regular'; 
+    text-face-name: 'Meta Offc Pro Medium'; 
     text-size: 10;
     text-fill: @text-fill;
     text-halo-fill: @text-halo-fill; //#444;
